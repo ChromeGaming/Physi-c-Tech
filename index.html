@@ -208,8 +208,27 @@
 		#discovery {
 			text-transform: uppercase;
 		}
+		.btns{
+			display:inline-flex;
+			flex-direction: column;
+		}
 		.btn {
+			border: 2px solid rgb(255, 0, 149);
 			cursor: pointer;
+			padding: 13px;
+			border-radius: 10px;
+			 background-color: #c45757; 
+            font-size: 17px;
+            transition: all 0.3s ease-in;
+			color: #ffffff;
+		}
+		.btn:hover{
+			background-color: #902209;
+			border:2px solid white;
+			color: #fff;
+		}
+		.btn:active{
+			background-color: #a95c5c;
 		}
 		.movie {
 			border:4px solid #000;
@@ -222,10 +241,12 @@
 <canvas id="homecanvas" width="400" height="600" style="display:none"></canvas>
 <div id="loader" class="loader" style="z-index:2;color:#FFF">Loading...</div>
 <div id="home" style="background-image: url(https://i.pinimg.com/originals/e6/c9/e3/e6c9e3d891aa56637847ba09c28fa00c.jpg); background-size: cover;"><div id="homecontent">
-	<h1 class="focusin" style="padding-top: 190px;">Physi-c<br>Tech</h1>
+	<h1 class="focusin" style="padding-top:140px;">Physi-c<br>Tech</h1>
+	<div class="btns">
 	<span id="playbutton" class="btn" onclick="play()">PLAY</span><br>
 	<span id="newgamebutton" class="btn" onclick="newgame()">NEW GAME</span><br>
 	<span id="soundbutton" class="btn" onclick="toggleSound()">SOUND ON</span><br>
+</div>
 </div></div>
 <div id="collection" class="trophy"><div id="wincontent" class="trophy"><h1>100% COMPLETE!</h1><h1>🏆</h1><h2 id="moves"></h2><span id="newgamebutton2">NEW GAME?</span></div><div id="collectioncontent" class="trophy"></div><div id="finalcontent" class="trophy"></div></div>
 <div id="modal" class="modal"><div id="modalcontent" class="modal"><h1 id="discovery" class="modal"></h1><div class="modal"><img id="discoveryimage" class="modal" src="" width="100" height="100"></div><h2 class="modal" id="discoverydesc" style="padding:10%"></h2></div></div>
