@@ -21,3 +21,16 @@ if (document.monetization) {
 		hintTime = 10000;
 	})
 }
+const toggleTheme = document.getElementById("toggleTheme");
+let darkMode = false;
+
+toggleTheme.addEventListener("click", () => {
+  darkMode = !darkMode;
+  if (darkMode) {
+    document.body.classList.add("dark-theme");
+    // Add any other UI changes here
+  } else {
+    document.body.classList.remove("dark-theme");
+    // Remove any other UI changes here
+  }
+});
