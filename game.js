@@ -214,6 +214,11 @@ openm=m=>{
 	document.getElementById(m).style.display="block";
 };
 play=()=>{
+	setTimeout(()=>{
+		document.querySelector(".pop-up").style.display="block";
+		document.querySelector(".outer").style.filter="blur(3px)";
+
+	},500);
 	hintInterval = setInterval(enableHint, hintTime);
 	finalize();
 	score();

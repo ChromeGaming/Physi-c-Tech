@@ -7,6 +7,7 @@
 	<meta name="monetization" content="$ilp.uphold.com/U9iHfppnha6L">
 	<title>Physi-c Tech</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -63,11 +64,26 @@
 			</div>
 		</div>
 	</div>
+	<div class="pop-up" style="display: none;">
+		<div class="upper-cross" style="padding: 4px;">
+			<button onclick="cross()"><i class="fa-solid fa-xmark fa-beat" style="color: white;"></i></button>
+		</div>
+		<div class="lower-content">
+			<img src="scientist.png" alt="" style="height: 90px;width: 90px;">
+			<p id="speech-text" >Hello, tech-enthusiasts!</p>
+		</div>
+		<div class="lower-button">
+			
+			<button onclick="nextSpeech()"><i class="fa-solid fa-forward fa-bounce fa-lg"></i></button>
+		</div>
+	
+	</div>
 	<script src="elements.js"></script>
 	<script src="game.js"></script>
 	<script src="music.js"></script>
 	<script src="svg.js"></script>
 	<script src="index.js"></script>
+	<script src="description.js"></script>
 </body>
 
 </html>
