@@ -1,5 +1,5 @@
 const speechTexts = [
-    "Hello, tech-enthusiasts!",
+
     "Welcome to our game!",
     "Are you ready to embark on an epic journey of technology and physics?",
     "Drag and drop the icon into the empty area to form new physics terms.",
