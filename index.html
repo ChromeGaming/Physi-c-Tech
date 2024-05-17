@@ -333,6 +333,69 @@
     <script src="music.js"></script>
     <script src="svg.js"></script>
     <script src="index.js"></script>
+	
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<canvas id="ctmp" width="100" height="100" style="display:none"></canvas>
+	<canvas id="homecanvas" width="400" height="600" style="display:none"></canvas>
+	<div id="loader" class="loader" style="z-index:2;color:#FFF">Loading...</div>
+	<div id="home"
+		style="background-image: url(https://i.pinimg.com/originals/e6/c9/e3/e6c9e3d891aa56637847ba09c28fa00c.jpg); background-size: cover;">
+		<div id="homecontent">
+			<h1 class="focusin" style="padding-top: 190px;">Physi-c<br>Tech</h1>
+			<span id="playbutton" class="btn" onclick="play()">PLAY</span><br>
+			<span id="newgamebutton" class="btn" onclick="newgame()">NEW GAME</span><br>
+			<span id="soundbutton" class="btn" onclick="toggleSound()">SOUND ON</span><br>
+		</div>
+	</div>
+	<div id="collection" class="trophy">
+		<div id="wincontent" class="trophy">
+			<h1>100% COMPLETE!</h1>
+			<h1>🏆</h1>
+			<h2 id="moves"></h2><span id="newgamebutton2">NEW GAME?</span>
+		</div>
+		<div id="collectioncontent" class="trophy"></div>
+		<div id="finalcontent" class="trophy"></div>
+	</div>
+	<div id="modal" class="modal">
+		<div id="modalcontent" class="modal">
+			<h1 id="discovery" class="modal"></h1>
+			<div class="modal"><img id="discoveryimage" class="modal" src="" width="100" height="100"></div>
+			<h2 class="modal" id="discoverydesc" style="padding:10%"></h2>
+		</div>
+	</div>
+	<div class="outer">
+		<div class="upper">
+			<div id="btnhome"><button id="homebutton" style="cursor: pointer;">🛖</button></div>
+			<div id="title">
+				<h1><span id="score">0</span>/<span id="max">0</span> discovered</h1>
+			</div>
+			<div id="btnhint"><button id="hint" style="opacity:.3;font-size:30px;cursor: pointer;">💡</button></div>
+			<div id="btncollection"><span id="collectionbutton" style="cursor: pointer;">🏅</span>
+				<div id="collectionnumbers">0/13</div>
+			</div>
+		</div>
+		<div id="forge" class="forge drop move">
+			<div id="trash" style="cursor: pointer;">🚮</div>
+		</div>
+		<div class="lower">
+			<div class="nav">
+				<div><button><img id="upbutton" width=40 height="80"></button></div>
+				<div><button><img id="downbutton" width=40 height="80"></button></div>
+			</div>
+			<div id="pantry" class="copy">
+				<div style="position:relative;top:5000px" id="spacer">.</div>
+			</div>
+		</div>
+	</div>
+	<script src="elements.js"></script>
+	<script src="game.js"></script>
+	<script src="music.js"></script>
+	<script src="svg.js"></script>
+	<script src="index.js"></script>
 </body>
 
 </html>
