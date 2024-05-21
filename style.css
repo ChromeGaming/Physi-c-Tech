@@ -112,6 +112,13 @@ button {
     font-size: 10px;
 }
 
+.pantrySlot:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: 0.2s;
+    
+}
+
 .nav {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -130,6 +137,10 @@ button {
 .outer {
     display: grid;
     grid-gap: 0;
+    background-image: url(bg2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
 }
 
 .lower {
