@@ -451,7 +451,7 @@ showHint=()=>{
 upsell=()=>{
 	document.getElementById('discovery').innerText = 'Want more hints?';
 	document.getElementById('discoveryimage').style.display = 'none';
-	document.getElementById('discoverydesc').innerHTML = 'Foll the link below <a href="https://www.linkedin.com/company/chromegaming" target="_new">Click Here</a> to learn more about the game.';
+	document.getElementById('discoverydesc').innerHTML = 'Follow the link  <a href="https://www.linkedin.com/company/chromegaming" target="_new">Click Here</a> to learn more about the game.';
 	openm('modal');
 };
 go=href=>{
