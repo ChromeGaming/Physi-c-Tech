@@ -7,10 +7,12 @@
     <style>
         body {
             background-color: #121212;
-            font-family: Arial, sans-serif;
-            color: white;
+            font-family: monospace;
+            color: #F0F3FF;
             margin: 0;
-            padding: 20px;
+            padding: 50px;
+            text-align: justify;
+            text-justify: inter-word;
         }
         h1, h3 {
             display: flex;
@@ -32,9 +34,16 @@
         }
         ul {
             list-style-type: none;
-            padding: 0;
-           
+            padding: 20px;
             margin: 20px auto;
+        }
+        ul.explore, ul.features, ul.why {
+            list-style-type: none;
+            padding: 20px;
+            border: 1px solid #F0F3FF;
+            border-radius: 25px;
+            margin: 20px auto;
+            background-color: #151515
         }
         li {
             margin: 10px 0;
@@ -64,7 +73,7 @@
         }
         .step img {
            width:50%;
-            margin-right: 20px;
+            margin-right: 50px;
             border-radius: 10px;
         }
         
@@ -76,76 +85,117 @@
         }
         .step1 img {
             max-width: 250px;
-            margin-right: 20px;
+            margin-right: 50px;
             border-radius: 10px;
         }
-       
+        .typewriter{
+        overflow: hidden;
+        border-right: .15em solid #F0F3FF; 
+        white-space: nowrap; 
+        margin: 0 auto; 
+        letter-spacing: .15em; 
+        animation: 
+            typing 3.5s steps(30, end),
+            blink-caret .5s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; } 
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; border-width: 1px;} 
+            50% { border-color: #F0F3FF }
+        }
+        .bounce {
+        animation: bounce .4s ease infinite alternate;
+        -webkit-animation: bounce .4s ease infinite alternate;
+        }
+        @keyframes bounce {
+            0% {
+                text-shadow: 0 5px 0 #ccc, 0 2px 3px rgba(0, 0, 0, 1);  
+            }
+            100% {
+                transform: translateY(-20px);
+                text-shadow: 0 50px 0 #000, 0 0 20px rgba(0, 0, 0, .8);
+            }
+        }
+        @-webkit-keyframes bounce {
+            0% {
+                text-shadow: 0 5px 0 #ccc, 0 2px 3px rgba(0, 0, 0, 1);  
+            }
+            100% {
+                -webkit-transform: translateY(-20px);
+                text-shadow: 0 50px 0 #000, 0 0 20px rgba(0, 0, 0, .8);
+            }
+        }
     </style>
 </head>
 <body> 
-    <h1>ABOUT THE GAME</h1>
-    <h3>Welcome to <span class="highlight">Physi-c-Tech</span>: The Ultimate Elemental Adventure!</h3>
+    <h1>ABOUT THE GAME</h1><br><br>
+    <h3><div class="typewriter">Welcome to&nbsp;<span class="highlight">Physi-c-Tech</span>: The Ultimate Elemental Adventure!</div></h3>
     <div class="content">
-        <p>Dive into a thrilling journey where physics meets technology in the most interactive and educational game ever created! <span class="highlight">Physi-c-Tech</span> is designed to ignite your curiosity, challenge your intellect, and broaden your understanding of the world around you through the exciting process of element discovery and combination.</p>
+        <p>Dive into a thrilling journey where physics meets technology in the most interactive and educational game ever created! <span class="highlight">Physi-c-Tech</span> is designed to ignite your curiosity, challenge your intellect, and broaden your understanding of the world around you through the exciting process of element discovery and combination.</p><br><br><br>
         
-        <h3>Explore and Discover:</h3>
-        <ul>
-            <li><span class="highlight">Dynamic Combinations:</span> Start with basic elements and combine them to create new, more complex ones. With each new combination, you unlock fascinating facts and insights about the elements you create.</li>
-            <li><span class="highlight">Level Up:</span> Progress through 13 challenging levels, each with the goal of discovering 100 new elements. As you advance, the combinations become more intricate, pushing your problem-solving skills to the limit.</li>
-            <li><span class="highlight">Interactive Learning:</span> Every new element you discover comes with a detailed pop-up box that reveals interesting facts, making learning a seamless part of the gaming experience.</li>
-        </ul>
-        <h3>How to Play:</h3>
+        <h3>Explore and Discover</h3>
+        <ul class="explore">
+            <li><span class="highlight"><center>Dynamic Combinations</center></span><br> Start with basic elements and combine them to create new, more complex ones. With each new combination, you unlock fascinating facts and insights about the elements you create.</li><br>
+            <li><span class="highlight"><center>Level Up</center></span><br> Progress through 13 challenging levels, each with the goal of discovering 100 new elements. As you advance, the combinations become more intricate, pushing your problem-solving skills to the limit.</li><br>
+            <li><span class="highlight"><center>Interactive Learning</center></span><br> Every new element you discover comes with a detailed pop-up box that reveals interesting facts, making learning a seamless part of the gaming experience.</li>
+        </ul><br><br><br>
+        <h3><div class="bounce">How to Play?</div></h3>
         <ul>
             <div class="step1">
                 <img src="1.png" alt="Start Your Adventure">
                 <div>
                     <span class="highlight">Start Your Adventure:</span> Begin by selecting "Play or Continue" to start or resume your game. If you're new, choose "New Game" to begin your journey from scratch.
                 </div>
-            </div>
+            </div><br>
             <div class="step">
                 <img src="2.png" alt="Combine Elements">
                 <div>
                     <span class="highlight">Combine Elements:</span> You will start with a set of basic elements. Drag and drop one element onto another to attempt a combination. If a valid combination is made, a new element is created.
                 </div>
-            </div>
+            </div><br>
             <div class="step">
                 <img src="4.png" alt="Track Your Progress">
                 <div>
                     <span class="highlight">Track Your Progress:</span> Your element box keeps track of all discovered elements. Review your collection and read up on the facts about each element you've created.
                 </div>
-            </div>
+            </div><br>
             <div class="step">
                 <img src="3.png" alt="Discover and Learn">
                 <div>
                     <span class="highlight">Discover and Learn:</span> When you create a new element, a pop-up box will appear with details and interesting facts about it. The new element is added to your element box, expanding your collection.
                 </div>
-            </div>
+            </div><br>
             <div class="step">
                 <img src="5.png" alt="Advance Through Levels">
                 <div>
                     <span class="highlight">Advance Through Levels:</span> Each level challenges you to discover 100 new elements. As you progress, combinations become more complex, requiring creative thinking and experimentation.
                 </div>
-            </div>
+            </div><br>
             
            
             <li><span class="highlight">Stay Engaged:</span> Use the "Sound On/Off" button to enhance your gaming experience with immersive sound effects. Visit the "About" section for more information on game mechanics and tips.</li>
-        </ul>
+        </ul><br><br><br>
         
-        <h3>Features:</h3>
-        <ul>
+        <h3>Features</h3>
+        <ul class="features">
             <li><span class="highlight">Engaging Gameplay:</span> Drag, drop, and combine elements in a user-friendly interface designed to make learning fun and intuitive.</li>
             <li><span class="highlight">Educational Value:</span> Gain knowledge about physics and technology with each new discovery. Our game is crafted to enhance your understanding of scientific principles and technological innovations.</li>
             <li><span class="highlight">Progress Tracking:</span> Easily track your discoveries and progress through each level. Your element box updates in real-time, showcasing all the elements you've created.</li>
             <li><span class="highlight">Stunning Visuals and Sound:</span> Immerse yourself in a visually appealing environment with captivating sound effects that enhance your gaming experience.</li>
-        </ul>
+        </ul><br><br><br>
         
         
         <h3>Why Physi-c-Tech?</h3>
-        <ul>
+        <ul class="why">
             <li><span class="highlight">Innovative Learning Tool:</span> Physi-c-Tech bridges the gap between education and entertainment, making it an ideal tool for students, teachers, and anyone with a passion for science.</li>
             <li><span class="highlight">Endless Possibilities:</span> With hundreds of elements to discover and countless combinations to explore, the game offers endless hours of engaging and educational gameplay.</li>
             <li><span class="highlight">Community and Competition:</span> Join a community of fellow explorers, share your discoveries, and compete to see who can uncover the most elements!</li>
-        </ul>
+        </ul><br><br><br>
         
         <p>Prepare yourself for an adventure where your creativity and intellect are your greatest tools. Whether you're a student eager to learn, a teacher looking for a fun educational tool, or simply someone who loves science and technology, <span class="highlight">Physi-c-Tech</span> promises an unforgettable experience.</p>
         
