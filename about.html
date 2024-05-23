@@ -34,11 +34,14 @@
             list-style-type: none;
             padding: 0;
            
-            margin: 20px auto;
+            margin: 10px auto 20px auto;
         }
         li {
             margin: 10px 0;
             font-size: 20px;
+        }
+        .explore li,.features li,.why li{
+            padding-bottom: 10px;
         }
         .content {
             display: flex;
@@ -48,6 +51,12 @@
         .highlight {
             color: #f43636;
             font-weight: bold;
+        }
+        .welcome{
+            line-height: 45px;
+        }
+        .welcome .highlight{
+            display: contents;
         }
         .popup {
             background-color: #282828;
@@ -61,9 +70,11 @@
             align-items: center;
             margin: 20px 0;
             font-size: 20px;
+            flex-direction: column-reverse;
+            flex-wrap: nowrap;
         }
         .step img {
-           width:50%;
+            width:80%;
             margin-right: 20px;
             border-radius: 10px;
         }
@@ -73,6 +84,8 @@
             align-items: center;
             margin: 20px 0;
             font-size: 20px;
+            flex-direction: column-reverse;
+            flex-wrap: nowrap;
         }
         .step1 img {
             max-width: 250px;
@@ -84,12 +97,12 @@
 </head>
 <body> 
     <h1>ABOUT THE GAME</h1>
-    <h3>Welcome to <span class="highlight">Physi-c-Tech</span>: The Ultimate Elemental Adventure!</h3>
+    <h3 class="welcome">Welcome to <span class="highlight"> Physi-c-Tech</span><br>The Ultimate Elemental Adventure!</h3>
     <div class="content">
         <p>Dive into a thrilling journey where physics meets technology in the most interactive and educational game ever created! <span class="highlight">Physi-c-Tech</span> is designed to ignite your curiosity, challenge your intellect, and broaden your understanding of the world around you through the exciting process of element discovery and combination.</p>
         
         <h3>Explore and Discover:</h3>
-        <ul>
+        <ul class="explore">
             <li><span class="highlight">Dynamic Combinations:</span> Start with basic elements and combine them to create new, more complex ones. With each new combination, you unlock fascinating facts and insights about the elements you create.</li>
             <li><span class="highlight">Level Up:</span> Progress through 13 challenging levels, each with the goal of discovering 100 new elements. As you advance, the combinations become more intricate, pushing your problem-solving skills to the limit.</li>
             <li><span class="highlight">Interactive Learning:</span> Every new element you discover comes with a detailed pop-up box that reveals interesting facts, making learning a seamless part of the gaming experience.</li>
@@ -132,7 +145,7 @@
         </ul>
         
         <h3>Features:</h3>
-        <ul>
+        <ul class="features">
             <li><span class="highlight">Engaging Gameplay:</span> Drag, drop, and combine elements in a user-friendly interface designed to make learning fun and intuitive.</li>
             <li><span class="highlight">Educational Value:</span> Gain knowledge about physics and technology with each new discovery. Our game is crafted to enhance your understanding of scientific principles and technological innovations.</li>
             <li><span class="highlight">Progress Tracking:</span> Easily track your discoveries and progress through each level. Your element box updates in real-time, showcasing all the elements you've created.</li>
@@ -141,7 +154,7 @@
         
         
         <h3>Why Physi-c-Tech?</h3>
-        <ul>
+        <ul class="why">
             <li><span class="highlight">Innovative Learning Tool:</span> Physi-c-Tech bridges the gap between education and entertainment, making it an ideal tool for students, teachers, and anyone with a passion for science.</li>
             <li><span class="highlight">Endless Possibilities:</span> With hundreds of elements to discover and countless combinations to explore, the game offers endless hours of engaging and educational gameplay.</li>
             <li><span class="highlight">Community and Competition:</span> Join a community of fellow explorers, share your discoveries, and compete to see who can uncover the most elements!</li>
