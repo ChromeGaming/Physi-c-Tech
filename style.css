@@ -84,7 +84,7 @@ button {
     float: right;
     overflow: auto;
     min-width: 100%;
-    min-height: 2000px;
+    min-height: 1000px;
     text-align: left;
 }
 
@@ -106,10 +106,10 @@ button {
 .pantrySlot {
     max-width: 54px;
     min-height: 105px;
-    margin: 3px;
+    margin: 25px;
     float: left;
     text-align: center;
-    font-size: 10px;
+    font-size: 20px;
 }
 
 .pantrySlot:hover{
@@ -124,7 +124,7 @@ button {
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-    min-height: 2000px;
+    min-height: 600px;
 }
 
 #upbutton,
@@ -138,9 +138,9 @@ button {
     display: grid;
     grid-gap: 0;
     background-image: url(bg2.png);
-    background-repeat: no-repeat;
     background-size: cover;
-    background-position: right;
+    background-position: top;
+
 }
 
 .lower {
@@ -165,6 +165,12 @@ button {
 #collectionbutton {
     font-size: 30px;
     position: relative;
+}
+
+#homebutton:hover{
+    transform:scale(1.2);
+    border:2px solid black;
+    cursor: pointer;
 }
 
 #collectionnumbers {
