@@ -17,7 +17,7 @@ jobs:
           COMMENT=$(cat <<EOF
           {
             "body": "Thank you for creating this issue! 🎉 We'll look into it as soon as possible. In the meantime, please make sure to provide all the necessary details and context. If you have any questions or additional information, feel free to add them here. Your contributions are highly appreciated! 😊
-You can also check our [CONTRIBUTING.md](https://github.com/GameSphere-MultiPlayer/Physi-c-Tech/blob/main/.github/CONTRIBUTING_GUIDELINE.md) for guidelines on contributing to this project."
+                    You can also check our [CONTRIBUTING.md](https://github.com/GameSphere-MultiPlayer/Physi-c-Tech/blob/main/.github/CONTRIBUTING_GUIDELINE.md) for guidelines on contributing to this project."
           }
           EOF
           )
