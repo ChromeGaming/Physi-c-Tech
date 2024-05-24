@@ -22,4 +22,6 @@ function nextSpeech() {
 function cross(){
     document.querySelector(".pop-up").style.display="none";
     document.querySelector(".outer").style.filter="blur(0px)";
+    document.querySelector(".pop-up-container").style.display="none";
+    document.querySelector(".pop-up-container").style.filter="blur(0px)";
 }

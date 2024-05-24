@@ -9,6 +9,19 @@ button {
     border: none;
 }
 
+.pop-up-container{
+    position:fixed;
+    top:0%;
+    left:0;
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color:rgba(0,0,0,0.5); */
+}
+
 .pop-up{
     height:170px;
     width:400px;
@@ -338,3 +351,22 @@ a {
     background-color: rgb(216, 0, 0);
 }
 
+@media (max-width: 425px){
+    .pop-up{
+        height:170px;
+        width:80%;
+        border:3px solid black;
+        z-index: 1000;
+        position: fixed;
+        top:30%;
+        left: 10%;
+        background-color: white;
+        display: none;
+        
+        display: flex;
+        
+        flex-direction: column;
+    
+        border-radius: 20px;
+    }
+}
