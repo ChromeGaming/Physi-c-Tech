@@ -156,19 +156,20 @@
 			</div>
 		</div>
 	</div>
-	<div class="pop-up" style="display: none;">
-		<div class="upper-cross" style="padding: 4px;">
-			<button onclick="cross()"><i class="fa-solid fa-xmark fa-beat" style="color: white;"></i></button>
+	<div class="pop-up-container">
+		<div class="pop-up" style="display: none;">
+			<div class="upper-cross" style="padding: 4px;">
+				<button onclick="cross()"><i class="fa-solid fa-xmark fa-beat" style="color: white;"></i></button>
+			</div>
+			<div class="lower-content">
+				<img src="scientist.png" alt="" style="height: 90px;width: 90px;">
+				<p id="speech-text" >Hello,tech-enthusiasts!</p>
+			</div>
+			<div class="lower-button">
+				
+				<button onclick="nextSpeech()"><i class="fa-solid fa-forward fa-bounce fa-lg"></i></button>
+			</div>
 		</div>
-		<div class="lower-content">
-			<img src="scientist.png" alt="" style="height: 90px;width: 90px;">
-			<p id="speech-text" >Hello,tech-enthusiasts!</p>
-		</div>
-		<div class="lower-button">
-			
-			<button onclick="nextSpeech()"><i class="fa-solid fa-forward fa-bounce fa-lg"></i></button>
-		</div>
-	
 	</div>
 	<script src="elements.js"></script>
 	<script src="game.js"></script>
