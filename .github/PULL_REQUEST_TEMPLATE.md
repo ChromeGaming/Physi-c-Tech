@@ -16,6 +16,14 @@ Fixes # <your_issue_number>
 - [ ] I have followed proper naming convention showed in [CONTRIBUTING GUIDELINE](https://github.com/GameSphere-MultiPlayer/Community-Page/blob/main/.github/CONTRIBUTING_GUIDELINE.md)
 - [ ] I have added screenshot for review.
 
+### Type of Change
+
+Select the program you want to contribute:
+
+- [ ] GSSOC
+- [ ] Others
+
+
 
 <hr>
 ## Add your screenshots(Optional) 📸
