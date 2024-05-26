@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback - Physi-c Tech</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="./atom.png" type="image/png" />
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://i.pinimg.com/originals/e6/c9/e3/e6c9e3d891aa56637847ba09c28fa00c.jpg');
+      background-size: cover;
+      color: white;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .feedback-container {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 30px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 600px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .feedback-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ff5c5c;
+    }
+
+    .feedback-container label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    .feedback-container input,
+    .feedback-container textarea,
+    .feedback-container select {
+      width: 98%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+
+    .feedback-container textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    .star-rating {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .star-rating input[type="radio"] {
+      display: none;
+    }
+
+    .star-rating label {
+      font-size: 2rem;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .star-rating input[type="radio"]:checked~label {
+      color: #ff5c5c;
+    }
+
+    .star-rating label:hover,
+    .star-rating label:hover~label {
+      color: #ff5c5c;
+    }
+
+    .feedback-container button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff5c5c;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .feedback-container button:hover {
+      background-color: #ff3333;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .feedback-container .back-button {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .feedback-container .back-button a {
+      color: #ff5c5c;
+      text-decoration: none;
+    }
+
+    .feedback-container .back-button a:hover {
+      text-decoration: underline;
+    }
+    option{
+        background: rgb(63, 63, 63);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="feedback-container">
+    <h2>Help Us Improve!</h2>
+    <form>
+      <label for="name" class="starArea">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="rating">Rating:</label>
+      <div class="star-rating">
+        <input type="radio" id="star5" name="rating" value="5">
+        <label for="star5" title="5 stars">&#9733;</label>
+        <input type="radio" id="star4" name="rating" value="4">
+        <label for="star4" title="4 stars">&#9733;</label>
+        <input type="radio" id="star3" name="rating" value="3">
+        <label for="star3" title="3 stars">&#9733;</label>
+        <input type="radio" id="star2" name="rating" value="2">
+        <label for="star2" title="2 stars">&#9733;</label>
+        <input type="radio" id="star1" name="rating" value="1">
+        <label for="star1" title="1 star">&#9733;</label>
+      </div>
+
+      <label for="issue">Issue Type:</label>
+      <select id="issue" name="issue">
+        <option value="bug">Bug</option>
+        <option value="suggestion">Suggestion</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="comments">Comments:</label>
+      <textarea id="comments" name="comments" required></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+    <div class="back-button">
+      <a href="index.html">&larr; Back to Home</a>
+    </div>
+  </div>
+</body>
+
+</html>
