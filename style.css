@@ -7,6 +7,7 @@ body {
 button {
     background-color: #fff;
     border: none;
+    border-radius: 40px;
 }
 
 .pop-up-container{
@@ -31,10 +32,10 @@ button {
     top:30%;
     left:38%;
     background-color: white;
-    display: none;
-    
+
+    display: none; 
     display: flex;
-    
+
     flex-direction: column;
 
     border-radius: 20px;
@@ -43,6 +44,7 @@ button {
     display:flex;
     justify-content: flex-end;
 }
+
 
 .pop-up .upper-cross button{
     background-color: red;
@@ -97,7 +99,7 @@ button {
     float: right;
     overflow: auto;
     min-width: 100%;
-    min-height: 2000px;
+    min-height: 1000px;
     text-align: left;
 }
 
@@ -110,6 +112,9 @@ button {
     max-height: 50px;
     min-height: 50px;
     min-width: 50px;
+    /* padding: 7px;
+    margin: 5px;
+    display: inline-block; */
 }
 
 .ingredient {
@@ -119,10 +124,24 @@ button {
 .pantrySlot {
     max-width: 54px;
     min-height: 105px;
-    margin: 3px;
+    margin: 25px;
     float: left;
     text-align: center;
-    font-size: 10px;
+    color: floralwhite;
+    font-size: 20px;
+
+    
+}
+
+#pantrySlot1 span{
+    margin-left: -15px;
+}
+
+.pantrySlot:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: 0.2s;
+    
 }
 
 .nav {
@@ -130,19 +149,24 @@ button {
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-    min-height: 2000px;
+    min-height: 600px;
 }
 
 #upbutton,
 #downbutton {
     padding-top: 15px;
     min-width: 48px;
-    min-height: 105px;
+    min-height: 70px;
+    
 }
 
 .outer {
     display: grid;
     grid-gap: 0;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: top;
+
 }
 
 .lower {
@@ -165,29 +189,42 @@ button {
 
 #homebutton,
 #collectionbutton {
+    margin: 7px;
     font-size: 30px;
     position: relative;
+    border-radius: 80px;
+    padding-bottom: 6px;
+}
+
+#homebutton:hover{
+    transform:scale(1.2);
+    border:2px solid black;
+    cursor: pointer;
 }
 
 #collectionnumbers {
     position: relative;
-    top: -3px;
+    top: -1px;
     left: 0px;
     font-weight: bold;
     font-size: 14px;
-    background-color: rgba(255, 255, 255, .8);
+    color:floralwhite;
+    padding-bottom: 0%;
 }
 
 #title {
     grid-column-start: 2;
     grid-column-end: 4;
     text-align: center;
+    color: whitesmoke;
 }
 
 #btnhint {
     text-align: right;
     grid-column-start: 4;
     grid-column-end: 5;
+    justify-self: left;
+    padding-top: 9px;
 }
 
 #btncollection {
