@@ -150,7 +150,7 @@ button {
 .outer {
     display: grid;
     grid-gap: 0;
-    background-image: url(background.jpg);
+    background-image: url(bg.jpg);
     background-size: cover;
     background-position: top;
 
