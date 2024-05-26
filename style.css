@@ -326,7 +326,10 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+    font-family: "Micro 5 Charted", sans-serif;
+    font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   }
   
   .buttons .btn {
