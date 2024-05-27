@@ -8,99 +8,17 @@
 	<title>Physi-c Tech</title>
 
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+		integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="icon" href="./atom.png" type="image/png" />
+</head>
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="icon" href="./atom.png" type="image/png"/>
-	<style>
-		.preloader {
-		  position: fixed;
-		  top: 0;
-		  left: 0;
-		  width: 100%;
-		  height: 100%;
-		  background: black; 
-		  display: flex;
-		  justify-content: center;
-		  align-items: center;
-		  z-index: 9999; /* Ensure the preloader is above all other content */
-		}
-	
-		.circle {
-  width: 200px; 
-  height: 200px;
-  background-color: black;
-  border-radius: 50%;
-  animation: circleAnimation 2s infinite linear, glowingBorder 2s infinite linear;
-  box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.8); /* Adjusted shadow values */
-}
-
-.circle:before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: hsl(357, 87%, 38%);
-    animation: circleAnimation 2s infinite linear, glowingBorder 2s infinite linear;
-}
-
-.circle:after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: hsl(357, 93%, 49%);
-    animation: circleAnimation 2s infinite linear, glowingBorder 2s infinite linear;
-}
-
-@keyframes circleAnimation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes glowingBorder {
-  0% {
-    box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.8); /* Adjusted shadow values */
-  }
-  50% {
-    box-shadow: 0 0 40px 20px rgba(255, 0, 0, 1); /* Adjusted shadow values */
-  }
-  100% {
-    box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.8); /* Adjusted shadow values */
-  }
-}
-	  </style>
-	</head>
-	<body>
-	  <div class="preloader">
+<body>
+	<div class="preloader">
 		<div class="circle"></div>
-	  </div>
-	
-	  <script>
-		window.addEventListener("load", () => {
-      setTimeout(() => {
-        const preloader = document.querySelector(".preloader");
-        preloader.style.opacity = "0";
-        preloader.style.visibility = "hidden";
+	</div>
 
-        setTimeout(() => {
-          preloader.remove();
-        }, 1000);
-      }, 5000); // Delay of 5 seconds before fading out the preloader
-    });
-	  </script>
-	  
 	<canvas id="ctmp" width="100" height="100" style="display:none"></canvas>
 	<canvas id="homecanvas" width="400" height="600" style="display:none"></canvas>
 
@@ -109,15 +27,14 @@
 		<div id="homecontent">
 			<h1 class="focusin" style="padding-top: 150px;">Physi-c<br>Tech</h1>
 			<div class="buttons">
-			<span id="playbutton" class="btn" onclick="play()">PLAY</span><br>
-			<span id="newgamebutton" class="btn" onclick="newgame()">NEW GAME</span><br>
-			<span id="soundbutton" class="btn" onclick="toggleSound()">SOUND ON</span><br>
-			<span class="btn" onclick="window.location.href='about.html'">ABOUT</span><br>
+				<span id="playbutton" class="btn" onclick="play()">PLAY</span><br>
+				<span id="newgamebutton" class="btn" onclick="newgame()">NEW GAME</span><br>
+				<span id="soundbutton" class="btn" onclick="toggleSound()">SOUND ON</span><br>
+				<span class="btn" onclick="window.location.href='about.html'">ABOUT</span><br>
+			</div>
 		</div>
-		</div>
-
-    
 	</div>
+
 	<div id="collection" class="trophy">
 		<div id="wincontent" class="trophy">
 			<h1>100% COMPLETE!</h1>
@@ -127,6 +44,7 @@
 		<div id="collectioncontent" class="trophy"></div>
 		<div id="finalcontent" class="trophy"></div>
 	</div>
+
 	<div id="modal" class="modal">
 		<div id="modalcontent" class="modal">
 			<h1 id="discovery" class="modal"></h1>
@@ -134,6 +52,7 @@
 			<h2 class="modal" id="discoverydesc" style="padding:10%"></h2>
 		</div>
 	</div>
+
 	<div class="outer">
 		<div class="upper">
 			<div id="btnhome"><button id="homebutton" style="cursor: pointer;">🛖</button></div>
@@ -145,9 +64,11 @@
 				<div id="collectionnumbers">0/13</div>
 			</div>
 		</div>
+
 		<div id="forge" class="forge drop move">
 			<div id="trash" style="cursor: pointer;">🚮</div>
 		</div>
+
 		<div class="lower">
 			<div class="nav">
 				<div><button><img id="upbutton" width=40 height="80"></button></div>
@@ -158,6 +79,7 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="pop-up-container">
 		<div class="pop-up" style="display: none;">
 			<div class="upper-cross" style="padding: 4px;">
@@ -165,14 +87,17 @@
 			</div>
 			<div class="lower-content">
 				<img src="scientist.png" alt="" style="height: 90px;width: 90px;">
-				<p id="speech-text" >Hello,tech-enthusiasts!</p>
+				<p id="speech-text">Hello, tech-enthusiasts!</p>
 			</div>
 			<div class="lower-button">
-				
 				<button onclick="nextSpeech()"><i class="fa-solid fa-forward fa-bounce fa-lg"></i></button>
 			</div>
 		</div>
 	</div>
+
+	<button id="feedbackButton" onclick="handleFeedback()">Facing an Issue? Help Us Improve!</button>
+
+	<script src="preloader.js"></script>
 	<script src="elements.js"></script>
 	<script src="game.js"></script>
 	<script src="music.js"></script>

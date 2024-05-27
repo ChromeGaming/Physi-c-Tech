@@ -1,5 +1,5 @@
 body {
-  margin: 0px;
+  margin: 0;
   font-family: sans-serif;
   font-size: 10px;
 }
@@ -11,7 +11,7 @@ button {
 
 .pop-up-container {
   position: fixed;
-  top: 0%;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -19,7 +19,6 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color:rgba(0,0,0,0.5); */
 }
 
 .pop-up {
@@ -31,14 +30,11 @@ button {
   top: 30%;
   left: 38%;
   background-color: white;
-  display: none;
-
   display: flex;
-
   flex-direction: column;
-
   border-radius: 20px;
 }
+
 .pop-up .upper-cross {
   display: flex;
   justify-content: flex-end;
@@ -54,12 +50,14 @@ button {
   align-items: center;
   cursor: pointer;
 }
+
 .pop-up .lower-content {
   display: flex;
   gap: 20px;
-  margin: 0px 20px;
+  margin: 0 20px;
   align-items: center;
 }
+
 .pop-up .lower-button {
   display: flex;
   justify-content: flex-end;
@@ -67,9 +65,11 @@ button {
   overflow: hidden;
   height: 25px;
 }
+
 .pop-up .lower-button button {
   cursor: pointer;
 }
+
 #speech-text {
   font-size: 17px;
 }
@@ -171,7 +171,7 @@ button {
 #collectionnumbers {
   position: relative;
   top: -3px;
-  left: 0px;
+  left: 0;
   font-weight: bold;
   font-size: 14px;
   background-color: rgba(255, 255, 255, 0.8);
@@ -278,7 +278,6 @@ button {
     top: -300px;
     opacity: 0;
   }
-
   to {
     top: 0;
     opacity: 1;
@@ -289,7 +288,6 @@ button {
   from {
     filter: blur(15px);
   }
-
   to {
     filter: blur(0px);
   }
@@ -338,8 +336,9 @@ button {
   color: #fff;
   font-weight: 500;
   font-size: 18px;
-  margin-bottom: 10px; /*To add spacing between bottom*/
+  margin-bottom: 10px;
 }
+
 .buttons .btn::before,
 .buttons .btn::after {
   position: absolute;
@@ -354,6 +353,7 @@ button {
   box-shadow: 20px 20px 50px rgba(74, 65, 57, 0.5);
   z-index: -2;
 }
+
 .buttons .btn::after {
   width: 99%;
   height: 75%;
@@ -365,7 +365,7 @@ button {
   background: linear-gradient(135deg, #f47f0a, #ff045c);
 }
 
-.buttons .btn:hover:after {
+.buttons .btn:hover::after {
   transform: scaleX(1.01) translateY(-15px);
 }
 
@@ -383,11 +383,11 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #333333;
+  background-color: #333;
   border-radius: 10px;
   transition: background-color 0.3s ease;
 }
@@ -406,12 +406,95 @@ a {
     top: 30%;
     left: 10%;
     background-color: white;
-    display: none;
-
     display: flex;
-
     flex-direction: column;
-
     border-radius: 20px;
   }
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  border-radius: 50%;
+  animation: circleAnimation 2s infinite linear, glowingBorder 2s infinite linear;
+  box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.8);
+}
+
+.circle:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: hsl(357, 87%, 38%);
+  animation: circleAnimation 2s infinite linear, glowingBorder 2s infinite linear;
+}
+
+.circle:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: hsl(357, 93%, 49%);
+  animation: circleAnimation 2s infinite linear, glowingBorder 2s infinite linear;
+}
+
+@keyframes circleAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes glowingBorder {
+  0% {
+    box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 40px 20px rgba(255, 0, 0, 1);
+  }
+  100% {
+    box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.8);
+  }
+}
+
+#feedbackButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 10000;
+}
+
+#feedbackButton:hover {
+  background-color: #ff3333;
 }
