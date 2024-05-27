@@ -1,19 +1,38 @@
-name: Auto Label Issue
+name: Auto Label Issue Based on Dropdown
 
 on:
   issues:
     types: [opened]
 
 jobs:
-  label:
+  auto-label:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Auto-label issue
-        uses: actions-ecosystem/action-add-labels@v1
+      - name: Set label based on dropdown selection
+        uses: actions/github-script@v6
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          labels: "GSSoC"
+          script: |
+            const issue = context.payload.issue;
+            const contribution = issue.body.match(/Select program in which you are contributing: (.*)/)[1].trim();
+
+            let label = '';
+            switch (contribution) {
+              case 'GSSoC24':
+                label = 'gssoc';
+                break;
+              case 'Other':
+                label = '';
+                break;
+            }
+
+            await github.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              labels: [label]
+            });
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
