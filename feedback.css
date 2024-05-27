@@ -1,0 +1,123 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://i.pinimg.com/originals/e6/c9/e3/e6c9e3d891aa56637847ba09c28fa00c.jpg');
+    background-size: cover;
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .feedback-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .feedback-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff5c5c;
+  }
+  
+  .feedback-container label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  .feedback-container input,
+  .feedback-container textarea,
+  .feedback-container select {
+    width: 98%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  
+  .feedback-container textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .star-rating input[type="radio"] {
+    display: none;
+  }
+  
+  .star-rating label {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .star-rating input[type="radio"]:checked~label {
+    color: #ff5c5c;
+  }
+  
+  .star-rating label:hover,
+  .star-rating label:hover~label {
+    color: #ff5c5c;
+  }
+  
+  .feedback-container button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff5c5c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .feedback-container button:hover {
+    background-color: #ff3333;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .feedback-container .back-button {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .feedback-container .back-button a {
+    color: #ff5c5c;
+    text-decoration: none;
+  }
+  
+  .feedback-container .back-button a:hover {
+    text-decoration: underline;
+  }
+  
+  option {
+    background: rgb(63, 63, 63);
+  }
+  
