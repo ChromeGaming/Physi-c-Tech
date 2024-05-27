@@ -34,11 +34,11 @@ body:
       value: "Description"
     validations:
       required: true
-  - type: dropdown
+- type: checkboxes
     id: contribution
     attributes:
-      label: Select program in which you are contributing
-      multiple: true
+      label: Program
+      description: Select the program in which you're contributing
       options:
         - GSSoC24
         - Other

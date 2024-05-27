@@ -1,33 +1,35 @@
-name: Label Pull Request Based on Selection
+name: Auto Label PR Based on Dropdown
 
 on:
   pull_request:
-    types: [opened, edited, synchronize]
+    types: [opened]
 
 jobs:
-  label:
+  auto-label:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Check out the repository
+      - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Apply label based on PR template selection
+      - name: Set label based on dropdown selection
         uses: actions/github-script@v6
         with:
           script: |
             const pr = context.payload.pull_request;
-            const labelsToAdd = [];
+            const body = pr.body;
 
-            if (pr.body.includes('- [ ] GSSOC')) {
-              labelsToAdd.push('gssoc');
+            let label = '';
+            if (body.includes('- [x] GSSoC24') || body.includes('- [X] GSSoC24')) {
+              label = 'gssoc';
             }
 
-            if (labelsToAdd.length > 0) {
-              github.rest.issues.addLabels({
+            if (label) {
+              await github.issues.addLabels({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: pr.number,
-                labels: labelsToAdd
+                labels: [label]
               });
             }
         env:

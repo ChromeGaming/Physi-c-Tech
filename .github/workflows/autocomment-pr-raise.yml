@@ -17,7 +17,7 @@ jobs:
         run: |
           COMMENT=$(cat <<EOF
           {
-            "body": "Thank you for submitting your pull request! 🙌 We'll review it as soon as possible. In the meantime, please ensure that your changes align with our [CONTRIBUTING.md](https://github.com/GameSphere-MultiPlayer/Physi-c-Tech/blob/main/.github/CONTRIBUTING_GUIDELINE.md). If there are any specific instructions or feedback regarding your PR, we'll provide them here. Thanks again for your contribution! 😊"
+            "body": "Thank you for submitting your pull request! 🙌 We'll review it as soon as possible. In the meantime, please ensure that your changes align with our [CONTRIBUTING.md](https://github.com/GameSphere-MultiPlayer/Physi-c-Tech/blob/main/.github/CONTRIBUTING_GUIDELINE.md). Also, you can join our [Discord](https://discord.com/invite/BjzSZq8GnN) channel for better communication. If there are any specific instructions or feedback regarding your PR, we'll provide them here. Thanks again for your contribution! 😊"
           }
           EOF
           )
