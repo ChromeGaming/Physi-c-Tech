@@ -323,7 +323,6 @@ button {
 }
 
 .buttons{
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -415,7 +414,7 @@ a {
         top:30%;
         left: 10%;
         background-color: white;
-        display: none;
+
         
         display: flex;
         
