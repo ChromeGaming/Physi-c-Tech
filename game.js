@@ -265,6 +265,8 @@ play=()=>{
 					go(D.g.getAttribute('href'));
 				} else if (D.g && D.g.classList.contains("modal")) {
 					close('modal');
+				} else if (D.g && D.g.classList.contains("cross")) {
+					close('cross');
 				} else if (D.g && D.g.classList.contains("trophy")) {
 					close('collection');
 				} else if (D.g && D.g.id == 'trash') {
