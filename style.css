@@ -411,6 +411,26 @@ a {
   background-color: rgb(216, 0, 0);
 }
 
+
+@media (max-width: 1024px) {
+  .pop-up {
+    height: 170px;
+    width: 80%;
+    top: 30%;
+    left: 10%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .pop-up {
+    height: 170px;
+    width: 70%;
+    top: 30%;
+    left: 15%;
+  }
+}
+
 @media (max-width: 425px) {
   .pop-up {
     height: 170px;
@@ -424,6 +444,15 @@ a {
     display: flex;
     flex-direction: column;
     border-radius: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .pop-up {
+    height: 170px;
+    width: 90%;
+    top: 30%;
+    left: 5%;
   }
 }
 
