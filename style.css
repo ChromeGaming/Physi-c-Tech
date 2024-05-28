@@ -51,6 +51,21 @@ button {
   cursor: pointer;
 }
 
+.cross{
+  display: flex;
+  justify-content: flex-end;
+}
+.cross .upper-cross button{
+  background-color: red;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; 
+}
+
 .pop-up .lower-content {
   display: flex;
   gap: 20px;
