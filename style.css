@@ -332,6 +332,12 @@ button {
   text-transform: uppercase;
 }
 
+#soundbutton2 {
+  font-size: 30px;   
+  cursor: pointer; 
+}
+
+
 .buttons {
   display: flex;
   flex-direction: column;
