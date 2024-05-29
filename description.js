@@ -25,3 +25,4 @@ function cross(){
     document.querySelector(".pop-up-container").style.display="none";
     document.querySelector(".pop-up-container").style.filter="blur(0px)";
 }
+

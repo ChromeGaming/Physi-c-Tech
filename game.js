@@ -224,6 +224,7 @@ play=()=>{
 	score();
 	close('home');
 	document.getElementById('soundbutton').onclick=null;
+	document.getElementById('soundbutton2').onclick=null;
 	document.getElementById('playbutton').innerText = 'CONTINUE';
 	if (!listened) {
 		(D = e => {
@@ -273,6 +274,8 @@ play=()=>{
 					clearForge();
 				} else if (D.g && D.g.id == 'soundbutton') {
 					toggleSound();
+				} else if (D.g && D.g.id == 'soundbutton2') {
+					toggleSound2();
 				} else if (D.g && D.g.id == 'hint' && hintsEnabled) {
 					showHint();
 				} else if (D.g && D.g.id == 'hint') {
@@ -422,12 +425,17 @@ play=()=>{
 toggleSound=()=>{
 	if (sound) {
 		document.getElementById('soundbutton').innerText = 'SOUND OFF';
+		document.getElementById('soundbutton2').innerText = '🔇';
 		sound = false;
 	} else {
 		document.getElementById('soundbutton').innerText = 'SOUND ON';
+		document.getElementById('soundbutton2').innerText = '🔊'
 		sound = true;
 	}
 };
+function toggleSound2() {
+    toggleSound(); 
+}
 newgame=()=>{
 	scrollUp();scrollUp();scrollUp();scrollUp();
 	localStorage.removeItem('sfa_discoveries');
