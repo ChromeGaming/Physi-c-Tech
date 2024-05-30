@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>About</title>
     <style>
         body {
@@ -147,6 +148,172 @@
                 text-shadow: 0 50px 0 #000, 0 0 20px rgba(0, 0, 0, .8);
             }
         }
+        body.Contact--none{
+            padding:0;
+        }
+        .Contact{
+            display: flex;
+            flex-flow:column nowrap;
+            margin:0;
+            align-items: center;
+            background-color:#f43636;
+            box-sizing: border-box;
+            padding:10px;
+            height: 50rem;
+            width: 100%;
+            
+            
+            
+        }
+        footer{
+            display: flex;
+            flex-direction:column;
+            justify-content:space-evenly;
+            align-items: flex-start;
+            
+            box-sizing: border-box;
+            padding:10px;
+            height: 300px;
+            width: 100%;
+
+        }
+     
+    .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centers the form vertically */
+}
+
+form {
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700vh;
+    display: flex;
+    flex-direction: column;
+}
+.form-group{
+    display: flex;
+    flex-direction: row;
+    gap:3rem;
+}
+.form-group,
+form input,
+form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.head{
+    font-size:2rem;
+    align-self: center;
+    color: #000;
+    text-align: center;
+    margin:10px;
+   
+}
+
+label {
+    font-weight: bold;
+    color: black;
+    
+}
+
+input,
+textarea {
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1em;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: black;
+}
+
+.btn-send {
+    background-color: black;
+    color: white;
+    border:none;
+    outline:none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1em;
+    max-width: 50rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    align-self: center;
+   
+}
+
+.btn-send:hover {
+    background-color: white;
+    color: black;
+    border:none;
+    outline:none;
+}
+
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+}
+.HOME{
+        font-size: 3.5rem;
+        text-decoration: none;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        margin-top: 30px;
+        margin-bottom:2rem;
+        align-self: center;
+          
+        }
+.HOME a {
+    color: white;
+}
+
+.HOME a:hover {
+    color: black;
+}
+
+.social {
+    font-size: 2.5rem;
+    text-decoration: none;
+    margin:0 1rem;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    gap: 2rem;
+    margin-bottom:30px;
+    align-self: center;
+}
+
+.social a {
+    color: white;
+}
+
+.social a:hover {
+    color: black;
+}
+footer .t{
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    min-width: 400px;
+    margin-top:3rem;
+    text-align: center;
+    
+   
+    
+
+}
+body.Contact { 
+		padding: 0!important;
+	} 
     </style>
 </head>
 <body> 
@@ -222,6 +389,74 @@
         <p>Prepare yourself for an adventure where your creativity and intellect are your greatest tools. Whether you're a student eager to learn, a teacher looking for a fun educational tool, or simply someone who loves science and technology, <span class="highlight">Physi-c-Tech</span> promises an unforgettable experience.</p>
         
         <p><span class="highlight">Start your journey now and see how many elements you can discover!</span></p>
+    </div>
+    <div class="Contact">
+        <footer>
+            <div class="HOME"><a href="#https://gamesphere-multiplayer.github.io/Physi-c-Tech/"><i class="fa fa-home" ></i></a></div>
+
+            <div class="social">
+                
+                <!-- Envelope Icon -->
+                <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
+                
+                <!-- GitHub Icon -->
+                <a href="https://github.com/GameSphere-MultiPlayer" target="_blank"><i class="fab fa-github"></i></a>
+                
+                <!-- Discord Icon -->
+                <a href="https://discord.gg/BjzSZq8GnN" target="_blank"><i class="fab fa-discord"></i></a>
+                
+                 
+                <!--Linkedin Icon -->
+                <a href="https://discord.gg/BjzSZq8GnN" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            
+            <footer class="t">
+                <span id="year"></span> All Rights Reserved @ Physi-c-Tech
+            </footer>
+        
+            <script>
+                document.getElementById('year').textContent = new Date().getFullYear();
+            </script>
+            
+         
+        </footer>
+        <div class="row ">
+          
+            <form action="/submit" method="POST" id="contact-form" role="form">
+                <div class="head" >Contact Us</div>
+            <div class="form-group">
+                
+            <div class="r1">
+           <label for="form_name">Firstname </label>
+           <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+            
+           <label for="form_lastname">Lastname </label>
+          <input id="form_lastname" type="text" name="surname" class="form-control"  placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+            </div>
+        <div class="r2">
+          <label for="form_email">Email </label>
+          <input id="form_email" type="email" name="email"
+              class="form-control" placeholder="Please enter your email *"
+              required="required" data-error="Valid email is required.">                                        
+              <label for="form_message">Message </label>
+              <textarea id="form_message" name="message" class="form-control"
+                  placeholder="Write your message here." rows="4"
+                  required="required"
+                  data-error="Please, leave us a message."></textarea>    
+        </div>    
+    </div>                               
+                  <input type="submit"
+                  class="btn btn-outline-dark btn-send pt-1 btn-block"
+                  value="Send Message">   
+                  </form>      
+                  
+        
+                                                
+                                            
+                                   
+                          
+                                       
+                                                    
     </div>
 </body>
 </html>
