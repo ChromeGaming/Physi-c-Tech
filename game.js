@@ -422,12 +422,17 @@ play=()=>{
 toggleSound=()=>{
 	if (sound) {
 		document.getElementById('soundbutton').innerText = 'SOUND OFF';
+		document.getElementById('soundbutton2').innerText = '🔇';
 		sound = false;
 	} else {
 		document.getElementById('soundbutton').innerText = 'SOUND ON';
+		document.getElementById('soundbutton2').innerText = '🔊'
 		sound = true;
 	}
 };
+function toggleSound2() {
+    toggleSound(); 
+}
 newgame=()=>{
 	scrollUp();scrollUp();scrollUp();scrollUp();
 	localStorage.removeItem('sfa_discoveries');
