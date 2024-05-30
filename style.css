@@ -374,6 +374,11 @@ button {
   z-index: -2;
 }
 
+#soundbutton2 {
+  font-size: 30px;   
+  cursor: pointer; 
+}
+
 .buttons .btn::after {
   width: 99%;
   height: 75%;
