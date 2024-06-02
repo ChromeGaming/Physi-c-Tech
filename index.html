@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="style.css">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="icon" href="./atom.png" type="image/png"/>
+	<link rel="icon" href="Logo.png" type="image/png"/>
 	<style>
 		.preloader {
 		  position: fixed;
@@ -83,10 +83,11 @@
 	  </style>
 	</head>
 	<body>
+		
+		
 	  <div class="preloader">
 		<div class="circle"></div>
 	  </div>
-	
 	  <script>
 		window.addEventListener("load", () => {
       setTimeout(() => {
@@ -106,8 +107,12 @@
 
 	<div id="home"
 		style="background-image: url(https://i.pinimg.com/originals/e6/c9/e3/e6c9e3d891aa56637847ba09c28fa00c.jpg); background-size: cover;">
-		<div id="homecontent">
-			<h1 class="focusin" style="padding-top: 150px;">Physi-c<br>Tech</h1>
+		<div id="homecontent" style="padding-top: 150px;">
+            <div class="logo_heading">
+                <img src="Logo.png" alt="" width="150px" height="150px" style="border-radius: 20%;">
+                <!-- <h1 class="focusin" >Physi-c<br>Tech</h1> -->
+            </div>
+			
 			<div class="buttons">
 			<span id="playbutton" class="btn" onclick="play()">PLAY</span><br>
 			<span id="newgamebutton" class="btn" onclick="newgame()">NEW GAME</span><br>
@@ -119,7 +124,7 @@
     
 	</div>
 	<div id="collection" class="trophy">
-		<div id="wincontent" class="trophy">
+		 <div id="wincontent" class="trophy">
 			<h1>100% COMPLETE!</h1>
 			<h1>🏆</h1>
 			<h2 id="moves"></h2><span id="newgamebutton2">NEW GAME?</span>
@@ -157,7 +162,7 @@
 				<div style="position:relative;top:5000px" id="spacer">.</div>
 			</div>
 		</div>
-	</div>
+	
 	<div class="pop-up-container">
 		<div class="pop-up" style="display: none;">
 			<div class="upper-cross" style="padding: 4px;">
