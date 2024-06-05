@@ -120,4 +120,6 @@ body {
   option {
     background: rgb(63, 63, 63);
   }
-  
+  .feedback-container>h2{
+    padding-top: 30px;
+  }
