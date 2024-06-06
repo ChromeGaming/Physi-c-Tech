@@ -132,6 +132,7 @@ button {
 
 .pantryIngredient:hover {
   cursor: pointer;
+  border: 3px solid rgb(9, 178, 9);
 }
 
 .pantrySlot {
