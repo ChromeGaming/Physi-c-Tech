@@ -130,6 +130,10 @@ button {
   position: absolute;
 }
 
+.pantryIngredient:hover {
+  cursor: pointer;
+}
+
 .pantrySlot {
   max-width: 54px;
   min-height: 105px;
@@ -467,7 +471,7 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #333;
+  background-color: #e82e2e;
   border-radius: 10px;
   transition: background-color 0.3s ease;
 }
