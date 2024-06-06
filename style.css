@@ -546,6 +546,10 @@ a {
   .focusin{
     padding-top:90px;
   }
+  .buttons .btn {
+    width: 130px;
+    height: 17px;
+    padding: 16px;
 }
 
 .preloader {
