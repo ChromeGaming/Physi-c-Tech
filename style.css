@@ -109,9 +109,9 @@ button {
   grid-row-start: 1;
   grid-row-end: 2;
   float: right;
-  overflow: auto;
-  min-width: 100%;
-  min-height: 2000px;
+  /* overflow: auto; */
+  min-width: 0;
+  /* min-height: 2000px; */
   text-align: left;
 }
 
@@ -157,6 +157,8 @@ button {
 .outer {
   display: grid;
   grid-gap: 0;
+  overflow: hidden;
+  max-height: 900px; 
 }
 
 .lower {
@@ -312,11 +314,11 @@ button {
     animation-name: focus;
     animation-duration: 1.5s;
     font-family: "Silkscreen", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  animation-name: focus;
-  animation-duration: 1.5s;
-  font-family: Impact, Arial Black;
+    font-weight: 400;
+    font-style: normal;
+    animation-name: focus;
+    animation-duration: 1.5s;
+    font-family: Impact, Arial Black;
 }
 
 #trash {
