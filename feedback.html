@@ -10,6 +10,15 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" href="./atom.png" type="image/png" />
   <link rel="stylesheet" href="feedback.css">
+   <script>
+    function handleSubmit(event) {
+      event.preventDefault(); // Prevent default form submission
+      // Display confirmation message
+      alert("Thank you for your feedback!");
+      // Reset the form
+      event.target.reset();
+    }
+  </script>
 </head>
 
 <body>

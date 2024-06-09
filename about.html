@@ -1,256 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>About</title>
-    <style>
-            body {
-              background-color: #121212;
-              font-family: monospace;
-              color: #f0f3ff;
-              margin: 0;
-              padding: 50px;
-              text-align: justify;
-              text-justify: inter-word;
-            }
-      #homecontent {
-                    display: flex;
-                    margin-left: auto;
-                    margin-right: auto;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./atom.png" type="image/png" />
+  <title>About</title>
+  <style>
+    body {
+      background-color: #121212;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #f0f3ff;
+      margin: 0;
+      padding: 50px;
+      text-align: justify;
+      text-justify: inter-word;
+      background-image: url('https://i.pinimg.com/originals/e6/c9/e3/e6c9e3d891aa56637847ba09c28fa00c.jpg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-attachment: fixed;
+    }
+
+    #homecontent {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
 
 
-                    color: #fff;
-                    width: 90%;
-                    height: 100%;
-                    text-align: left;
-                    font-size: 2.5em;
-                  }
+      color: #fff;
+      width: 90%;
+      height: 100%;
+      text-align: left;
+      font-size: 2.5em;
+    }
 
-       #homecontent h1{
-                margin-left: 26%;
-            }
-                  #homecontent span,
-                  #homecontent div {
-                    font-style: normal;
-                  }
-                  .buttons {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: left;
-                    justify-content: center;
-                  }
+    #homecontent h1 {
+      margin-left: 26%;
+      color: #ff5c5c;
+    }
 
-       .buttons .btn {
-                    position: relative;
-                    width: 140px;
-                    height: 20px;
-                    cursor: pointer;
-                    padding: 17px;
-                    padding-left: 26px;
-                    padding-right: 26spx;
-                    align-items: center;
-                    background: none;
-                    border: none;
-                    color: #fff;
-                    font-weight: 500;
-                    font-size: 18px;
-                    margin-bottom: 10px; /*To add spacing between bottom*/
-                  }
-                  .buttons a {
-                    text-decoration: none;
-                  }
+    #homecontent span,
+    #homecontent div {
+      font-style: normal;
+    }
 
-        .buttons .btn::before,
-                  .buttons .btn::after {
-                    position: absolute;
-                    content: "";
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    backdrop-filter: blur(15px);
-                    background: rgba(253, 251, 251, 0.049);
-                    border-radius: 10px;
-                    box-shadow: 20px 20px 50px rgba(74, 65, 57, 0.5);
-                    z-index: -2;
-                  }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: center;
+    }
 
-       .buttons .btn::after {
-                    width: 99%;
-                    height: 75%;
-                    top: 25%;
-                    left: 0.5%;
-                    z-index: -3;
-                    transform: scaleX(0.5);
-                    transition: all 0.3s;
-                    background: linear-gradient(135deg, #f47f0a, #ff045c);
-                  }
+    .buttons .btn {
+      position: relative;
+      width: 140px;
+      height: 20px;
+      cursor: pointer;
+      padding: 17px;
+      padding-left: 26px;
+      padding-right: 26spx;
+      align-items: center;
+      background: none;
+      border: none;
+      color: #fff;
+      font-weight: 500;
+      font-size: 18px;
+      margin-bottom: 10px;
+      z-index: 1;
+    }
 
-                  .buttons .btn:hover:after {
-                    transform: scaleX(1.01) translateY(-15px);
-                  }
+    .buttons a {
+      text-decoration: none;
+    }
 
-            h1,
-            h3 {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              text-align: center;
-              margin: 10px 0;
-            }
-            h1 {
-              font-size: 50px;
-            }
-            h3 {
-              font-size: 30px;
-            }
-            p {
-              font-size: 20px;
-              line-height: 1.6;
-              margin: 20px auto;
-            }
-            ul {
-              list-style-type: none;
+    .buttons .btn::before,
+    .buttons .btn::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(15px);
+      background: rgba(253, 251, 251, 0.049);
+      border-radius: 10px;
+      box-shadow: 20px 20px 50px rgba(74, 65, 57, 0.5);
+      z-index: -2;
+    }
 
-              padding: 20px;
-              margin: 20px auto;
-            }
-            ul.explore,
-            ul.features,
-            ul.why {
-              list-style-type: none;
-              padding: 20px;
-              border: 1px solid #f0f3ff;
-              border-radius: 25px;
-              margin: 20px auto;
-              background-color: #151515;
-            }
-            li {
-              margin: 10px 0;
-              font-size: 20px;
-            }
-            .explore li,
-            .features li,
-            .why li {
-              padding-bottom: 10px;
-            }
-            .content {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-            }
-            .highlight {
-              color: #f43636;
-              font-weight: bold;
-            }
-            .welcome {
-              line-height: 45px;
-            }
-            .welcome .highlight {
-              display: contents;
-            }
-            .popup {
-              background-color: #282828;
-              border: 2px solid #f43636;
-              padding: 10px;
-              margin: 20px;
-              border-radius: 10px;
-            }
-            .step {
-              display: flex;
-              align-items: center;
-              margin: 20px 0;
-              font-size: 20px;
-              flex-direction: column-reverse;
-              flex-wrap: nowrap;
-            }
-            .step img {
-              width: 50%;
-              margin-right: 50px;
-              margin-top: 30px;
-              border-radius: 10px;
-            }
+    .buttons .btn::after {
+      width: 99%;
+      height: 75%;
+      top: 25%;
+      left: 0.5%;
+      z-index: -3;
+      transform: scaleX(0.5);
+      transition: all 0.3s;
+      background: linear-gradient(135deg, #f47f0a, #ff045c);
+    }
 
-            .step1 {
-              display: flex;
-              align-items: center;
-              margin: 20px 0;
-              font-size: 20px;
-              flex-direction: column-reverse;
-              flex-wrap: nowrap;
-            }
-            .step1 img {
-              max-width: 250px;
-              margin-top: 30px;
-              margin-right: 50px;
-              border-radius: 10px;
-            }
-            .typewriter {
-              overflow: hidden;
-              border-right: 0.15em solid #f0f3ff;
-              white-space: nowrap;
-              margin: 0 auto;
-              letter-spacing: 0.15em;
-              animation: typing 3.5s steps(30, end),
-                blink-caret 0.5s step-end infinite;
-            }
+    .buttons .btn:hover:after {
+      transform: scaleX(1.01) translateY(-15px);
+    }
 
-            @keyframes typing {
-              from {
-                width: 0;
-              }
-              to {
-                width: 100%;
-              }
-            }
+    h1,
+    h3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 10px 0;
+    }
 
-            @keyframes blink-caret {
-              from,
-              to {
-                border-color: transparent;
-                border-width: 1px;
-              }
-              50% {
-                border-color: #f0f3ff;
-              }
-            }
-            .bounce {
-              animation: bounce 0.4s ease infinite alternate;
-              -webkit-animation: bounce 0.4s ease infinite alternate;
-            }
-            @keyframes bounce {
-              0% {
-                text-shadow: 0 5px 0 #ccc, 0 2px 3px rgba(0, 0, 0, 1);
-              }
-              100% {
-                transform: translateY(-20px);
-                text-shadow: 0 50px 0 #000, 0 0 20px rgba(0, 0, 0, 0.8);
-              }
-            }
-            @-webkit-keyframes bounce {
-              0% {
-                text-shadow: 0 5px 0 #ccc, 0 2px 3px rgba(0, 0, 0, 1);
-              }
-              100% {
-                -webkit-transform: translateY(-20px);
-                text-shadow: 0 50px 0 #000, 0 0 20px rgba(0, 0, 0, .8);
-            }
-        }
-       
-       
+    h1 {
+      font-size: 50px;
+      color: #ff6347;
+    }
 
-    </style>
-  </head>
-  <body>
+    h3 {
+      font-size: 30px;
+      color: gold;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+      margin: 20px auto;
+    }
+
+    ul {
+      list-style-type: none;
+
+      padding: 20px;
+      margin: 20px auto;
+    }
+
+    ul.explore,
+    ul.features,
+    ul.why {
+      list-style-type: none;
+      padding: 20px;
+      border: 1px solid #f0f3ff;
+      border-radius: 25px;
+      margin: 20px auto;
+      background-color: #151515;
+    }
+
+    li {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+
+    .explore li,
+    .features li,
+    .why li {
+      padding-bottom: 10px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .highlight {
+      color: #f43636;
+      font-weight: 900;
+      text-decoration: underline;
+    }
+
+    .welcome {
+      line-height: 45px;
+    }
+
+    .welcome .highlight {
+      display: contents;
+    }
+
+    .popup {
+      background-color: #282828;
+      border: 2px solid #f43636;
+      padding: 10px;
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+      font-size: 20px;
+      flex-direction: column-reverse;
+      flex-wrap: nowrap;
+    }
+
+    .step img {
+      width: 50%;
+      margin-right: 50px;
+      margin-top: 30px;
+      border-radius: 10px;
+    }
+
+    .step1 {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+      font-size: 20px;
+      flex-direction: column-reverse;
+      flex-wrap: nowrap;
+    }
+
+    .step1 img {
+      max-width: 250px;
+      margin-top: 30px;
+      margin-right: 50px;
+      border-radius: 10px;
+    }
+
+    .typewriter {
+      overflow: hidden;
+      border-right: 0.15em solid #f0f3ff;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: 0.15em;
+      animation: typing 3.5s steps(30, end),
+        blink-caret 0.5s step-end infinite;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink-caret {
+
+      from,
+      to {
+        border-color: transparent;
+        border-width: 1px;
+      }
+
+      50% {
+        border-color: #f0f3ff;
+      }
+    }
+
+    .bounce {
+      animation: bounce 0.4s ease infinite alternate;
+      -webkit-animation: bounce 0.4s ease infinite alternate;
+    }
+
+    @keyframes bounce {
+      0% {
+        text-shadow: 0 5px 0 #ccc, 0 2px 3px rgba(0, 0, 0, 1);
+      }
+
+      100% {
+        transform: translateY(-20px);
+        text-shadow: 0 50px 0 #000, 0 0 20px rgba(0, 0, 0, 0.8);
+      }
+    }
+
+    @-webkit-keyframes bounce {
+      0% {
+        text-shadow: 0 5px 0 #ccc, 0 2px 3px rgba(0, 0, 0, 1);
+      }
+
+      100% {
+        -webkit-transform: translateY(-20px);
+        text-shadow: 0 50px 0 #000, 0 0 20px rgba(0, 0, 0, 0.8);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      #homecontent h1 {
+        margin-left: 10px;
+        margin-top: 1px;
+        font-size: 25px;
+      }
+
+      .step,
+      .step1 {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .step img,
+      .step1 img {
+        width: 80%;
+        margin: 10px 0;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      h3 {
+        font-size: 24px;
+      }
+
+      p,
+      li {
+        font-size: 18px;
+      }
+
+      ul {
+        padding: 10px;
+        margin: 10px auto;
+      }
+
+      .typewriter {
+        font-size: 20px;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+      }
+
+      .buttons .btn {
+        width: 120px;
+        /* Adjust the width */
+        height: 15px;
+        /* Adjust the height */
+        padding: 14px;
+        /* Adjust the padding */
+        font-size: 16px;
+        /* Adjust the font size */
+        margin-bottom: 8px;
+        /* Adjust the margin bottom */
+      }
+    }
+
+    .fullCont {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+      animation: fadeIn 2s ease-in-out;
+      border-radius: 20px;
+    }
+    @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <div class="fullCont">
     <div id="homecontent">
       <div class="buttons">
-        <a href="index.html"><span id="playbutton" class="btn">HOME</span></a
-        ><br />
+        <a href="index.html"><span id="playbutton" class="btn">HOME</span></a><br />
       </div>
       <h1>ABOUT THE GAME</h1>
-          
     </div>
 
     <h3>
@@ -274,30 +387,36 @@
       <h3>Explore and Discover</h3>
       <ul class="explore">
         <li>
-          <span class="highlight"><center>Dynamic Combinations</center></span
-          ><br />
+          <span class="highlight">
+            <center>Dynamic Combinations</center>
+          </span><br />
           Start with basic elements and combine them to create new, more complex
           ones. With each new combination, you unlock fascinating facts and
           insights about the elements you create.
         </li>
         <br />
         <li>
-          <span class="highlight"><center>Level Up</center></span><br />
+          <span class="highlight">
+            <center>Level Up</center>
+          </span><br />
           Progress through 13 challenging levels, each with the goal of
           discovering 100 new elements. As you advance, the combinations become
           more intricate, pushing your problem-solving skills to the limit.
         </li>
         <br />
         <li>
-          <span class="highlight"><center>Interactive Learning</center></span
-          ><br />
+          <span class="highlight">
+            <center>Interactive Learning</center>
+          </span><br />
           Every new element you discover comes with a detailed pop-up box that
           reveals interesting facts, making learning a seamless part of the
           gaming experience.
         </li>
       </ul>
       <br /><br /><br />
-      <h3><div class="bounce">How to Play?</div></h3>
+      <h3>
+        <div class="bounce">How to Play?</div>
+      </h3>
 
       <ul>
         <div class="step1">
@@ -416,21 +535,11 @@
       </p>
 
       <p>
-        <span class="highlight"
-          >Start your journey now and see how many elements you can
-          discover!</span
-        >
+        <span class="highlight">Start your journey now and see how many elements you can
+          discover!</span>
       </p>
     </div>
-    
-                                                
-                                            
-                                   
-                          
-                                       
-                                                    
-    
-    </div>
-
+  </div>
 </body>
+
 </html>
