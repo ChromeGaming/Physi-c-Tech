@@ -389,11 +389,46 @@ button {
   box-shadow: 20px 20px 50px rgba(74, 65, 57, 0.5);
   z-index: -2;
 }
+#hint {
+  background-color: #bebfbe;
+  border: salmon;
+  color: #FFFFFF;
+  padding: 10px;
+  width: 30px;
+  height: 30px;
+  -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;
+  overflow: hidden;
+  cursor: pointer;
+}
 
+#hint:after {
+  content: "";
+  background: #e0e4e0;
+
+  opacity: 0;
+  transition: all 0.8s
+}
+
+#hint:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+
+/* sound button    */
 #soundbutton2 {
   font-size: 30px;   
   cursor: pointer; 
 }
+#soundbutton2:hover {background-color: #ffffff}
+
+#soundbutton2:active {
+ 
+  box-shadow: 0 5px #fffefe;
+  transform: translateY(4px);
 
 .buttons .btn::after {
   width: 99%;
