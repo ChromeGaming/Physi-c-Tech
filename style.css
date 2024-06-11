@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   font-size: 10px;
+  overflow: hidden;
 }
 
 button {
@@ -491,8 +492,6 @@ a {
         border-radius: 20px;
     }
 }
-  background-color: rgb(216, 0, 0);
-}
 
 
 @media (max-width: 1024px) {
@@ -634,4 +633,5 @@ a {
 
 #feedbackButton:hover {
   background-color: #ff3333;
+}
 }
