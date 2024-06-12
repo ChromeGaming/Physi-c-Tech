@@ -19,7 +19,32 @@
       background-repeat: no-repeat;
       background-size: 100%;
       background-attachment: fixed;
+      
     }
+    /* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px;
+ 
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d61c1c;
+  border: 1px solid black;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    outline: none;
+    border-color: red;
+    border-radius: 10px;
+    box-shadow: 0 0 10px darkred;
+}
+
 
     #homecontent {
       display: flex;
