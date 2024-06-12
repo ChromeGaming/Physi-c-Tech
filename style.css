@@ -184,6 +184,29 @@ button {
   text-align: left;
 }
 
+
+#homebutton:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.2);  /* Increase size on hover (adjust as desired) */
+}
+#collectionbutton:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.2);  /* Increase size on hover (adjust as desired) */
+}
+#hint:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.2);  /* Increase size on hover (adjust as desired) */
+}
+#soundbutton2:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.2);  /* Increase size on hover (adjust as desired) */
+}
+#trash:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.1);  /* Increase size on hover (adjust as desired) */
+}
+
+
 #homebutton,
 #collectionbutton {
   font-size: 30px;
