@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -294,15 +295,138 @@
         padding: 14px; /* Adjust the padding */
         font-size: 16px; /* Adjust the font size */
         margin-bottom: 8px; /* Adjust the margin bottom */
+
       }
-          }
-    </style>
-  </head>
-  <body>
+
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink-caret {
+
+      from,
+      to {
+        border-color: transparent;
+        border-width: 1px;
+      }
+
+      50% {
+        border-color: #f0f3ff;
+      }
+    }
+
+    .bounce {
+      animation: bounce 0.4s ease infinite alternate;
+      -webkit-animation: bounce 0.4s ease infinite alternate;
+    }
+
+    @keyframes bounce {
+      0% {
+        text-shadow: 0 5px 0 #ccc, 0 2px 3px rgba(0, 0, 0, 1);
+      }
+
+      100% {
+        transform: translateY(-20px);
+        text-shadow: 0 50px 0 #000, 0 0 20px rgba(0, 0, 0, 0.8);
+      }
+    }
+
+    @-webkit-keyframes bounce {
+      0% {
+        text-shadow: 0 5px 0 #ccc, 0 2px 3px rgba(0, 0, 0, 1);
+      }
+
+      100% {
+        -webkit-transform: translateY(-20px);
+        text-shadow: 0 50px 0 #000, 0 0 20px rgba(0, 0, 0, 0.8);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      #homecontent h1 {
+        margin-left: 10px;
+        margin-top: 1px;
+        font-size: 25px;
+      }
+
+      .step,
+      .step1 {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .step img,
+      .step1 img {
+        width: 80%;
+        margin: 10px 0;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      h3 {
+        font-size: 24px;
+      }
+
+      p,
+      li {
+        font-size: 18px;
+      }
+
+      ul {
+        padding: 10px;
+        margin: 10px auto;
+      }
+
+      .typewriter {
+        font-size: 20px;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+      }
+
+      .buttons .btn {
+        width: 120px;
+        /* Adjust the width */
+        height: 15px;
+        /* Adjust the height */
+        padding: 14px;
+        /* Adjust the padding */
+        font-size: 16px;
+        /* Adjust the font size */
+        margin-bottom: 8px;
+        /* Adjust the margin bottom */
+      }
+    }
+
+    .fullCont {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+      animation: fadeIn 2s ease-in-out;
+      border-radius: 20px;
+    }
+    @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <div class="fullCont">
     <div id="homecontent">
       <div class="buttons">
-        <a href="index.html"><span id="playbutton" class="btn">HOME</span></a
-        ><br />
+        <a href="index.html"><span id="playbutton" class="btn">HOME</span></a><br />
       </div>
       <h1>ABOUT THE GAME</h1>
     </div>
@@ -328,30 +452,36 @@
       <h3>Explore and Discover</h3>
       <ul class="explore">
         <li>
-          <span class="highlight"><center>Dynamic Combinations</center></span
-          ><br />
+          <span class="highlight">
+            <center>Dynamic Combinations</center>
+          </span><br />
           Start with basic elements and combine them to create new, more complex
           ones. With each new combination, you unlock fascinating facts and
           insights about the elements you create.
         </li>
         <br />
         <li>
-          <span class="highlight"><center>Level Up</center></span><br />
+          <span class="highlight">
+            <center>Level Up</center>
+          </span><br />
           Progress through 13 challenging levels, each with the goal of
           discovering 100 new elements. As you advance, the combinations become
           more intricate, pushing your problem-solving skills to the limit.
         </li>
         <br />
         <li>
-          <span class="highlight"><center>Interactive Learning</center></span
-          ><br />
+          <span class="highlight">
+            <center>Interactive Learning</center>
+          </span><br />
           Every new element you discover comes with a detailed pop-up box that
           reveals interesting facts, making learning a seamless part of the
           gaming experience.
         </li>
       </ul>
       <br /><br /><br />
-      <h3><div class="bounce">How to Play?</div></h3>
+      <h3>
+        <div class="bounce">How to Play?</div>
+      </h3>
 
       <ul>
         <div class="step1">
@@ -470,11 +600,11 @@
       </p>
 
       <p>
-        <span class="highlight"
-          >Start your journey now and see how many elements you can
-          discover!</span
-        >
+        <span class="highlight">Start your journey now and see how many elements you can
+          discover!</span>
       </p>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
