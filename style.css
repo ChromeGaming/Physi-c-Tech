@@ -184,6 +184,15 @@ button {
   grid-column-end: 2;
   text-align: left;
 }
+#feedbackButton:hover
+{
+    
+    cursor: pointer; /* changes cursor to pointer on hover */
+    text-decoration: underline; /* adds underline on hover (optional) */
+    color:cadetblue; /* change color on hover (optional) */
+    
+}
+
 
 #homebutton,
 #collectionbutton {
