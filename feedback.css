@@ -120,4 +120,15 @@ body {
   option {
     background: rgb(63, 63, 63);
   }
-  
+  .feedback-container>h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    padding-top: 10vh;
+  }
+  h2 {
+    margin: 0;
+    font-size: 2em;
+  }
