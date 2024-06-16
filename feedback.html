@@ -22,16 +22,27 @@
 </head>
 
 <body>
-  <div class="feedback-container">
-    <h2>Help Us Improve!</h2>
+  <div 
+    
+     style="background-color: rgb(210, 106, 205);
+     padding: 0px; border-radius: 20px; 
+     padding-bottom: 20px;
+     padding-inline: 20px;
+     width: 90%;
+     height: 400px;"
+    
+    class="feedback-container">
+    <h1
+    style="padding: 20px; margin: 20px;"
+      > We value your feedback!! </h1>
     <form>
-      <label for="name" class="starArea">Name:</label>
+      <label for="name" class="starArea">Name:</label><br>
       <input type="text" id="name" name="name" required>
 
-      <label for="email">Email:</label>
+      <label for="email"> <br>Email:</label><br>
       <input type="email" id="email" name="email" required>
 
-      <label for="rating">Rating:</label>
+      <label for="rating">Rating:</label> <br>
       <div class="star-rating">
         <input type="radio" id="star5" name="rating" value="5">
         <label for="star5" title="5 stars">&#9733;</label>
@@ -45,15 +56,15 @@
         <label for="star1" title="1 star">&#9733;</label>
       </div>
 
-      <label for="issue">Issue Type:</label>
+      <label for="issue">Issue Type:</label> <br>
       <select id="issue" name="issue">
         <option value="bug">Bug</option>
         <option value="suggestion">Suggestion</option>
         <option value="other">Other</option>
       </select>
 
-      <label for="comments">Comments:</label>
-      <textarea id="comments" name="comments" required></textarea>
+      <label for="comments"> <br> Comments:</label> <br>
+      <textarea id="comments" name="comments" required></textarea> <br>
 
       <button type="submit">Submit Feedback</button>
     </form>
