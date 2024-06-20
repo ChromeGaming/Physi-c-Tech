@@ -341,7 +341,7 @@ button {
 
 @keyframes focus {
   from {
-    filter: blur(15px);
+    filter: blur(10px);
   }
   to {
     filter: blur(0px);
@@ -358,7 +358,8 @@ button {
   animation-name: focus;
   animation-duration: 1.5s;
   font-family: Impact, Arial Black;
-  padding-top: 150px;
+  padding-top: 200px;
+  font-size: 65px;
 
     font-weight: 400;
     font-style: normal;
