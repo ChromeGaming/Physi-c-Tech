@@ -299,7 +299,8 @@ button {
   text-align: center;
   vertical-align: middle;
   font-size: 18px;
-  display: none;
+  display: none; 
+
 }
 
 #homecontent {
@@ -310,9 +311,31 @@ button {
   height: 100%;
   text-align: center;
   font-size: 2.5em;
-  font-style: italic;
+  font-style: italic;  overflow-y: auto; /* Enable vertical scrolling */
+  height: 100vh
+}
+/* Style the scrollbar - Chrome, Safari */
+#homecontent::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
 }
 
+#homecontent::-webkit-scrollbar-track {
+  background: #282c34; /* Color of the track */
+}
+
+#homecontent::-webkit-scrollbar-thumb {
+  background: #b63c0c; /* Color of the scroll thumb */
+}
+
+#homecontent::-webkit-scrollbar-thumb:hover {
+  background: #fff; /* Color of the scroll thumb on hover */
+}
+
+/* Style the scrollbar - Firefox */
+#homecontent {
+  scrollbar-width: thin; /* Width of the scrollbar */
+  scrollbar-color: #b63c0c #282c34; /* Scroll thumb and track color */
+}
 #homecontent span,
 #homecontent div {
   font-style: normal;
