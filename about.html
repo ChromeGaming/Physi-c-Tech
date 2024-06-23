@@ -379,7 +379,137 @@
       transform: translateY(0);
     }
     
+    
   }
+  /* Heading style with animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  animation: fadeIn 2s ease-out;
+  text-align: center;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Hover effect */
+h1:hover {
+  color: #f47f0a;
+  text-shadow: 0 0 10px rgba(244, 127, 10, 0.5);
+}
+@keyframes jumpAnimation {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.jump {
+  animation: jumpAnimation 0.5s ease-in-out;
+}
+/* General Card Styling */
+ul.explore, ul.features, ul.why {
+  list-style-type: none;
+  padding: 30px; /* Increased padding */
+  border: 1px solid #f0f3ff;
+  border-radius: 25px;
+  margin: 20px auto;
+  background-color: #151515;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  animation: cardLoad 0.5s ease-out forwards; /* Animation for card appearance */
+}
+
+/* Hover Effect */
+ul.explore:hover, ul.features:hover, ul.why:hover {
+  transform: scale(1.03); /* Slight scale up */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow for "lift" effect */
+}
+
+/* Animation for Card Appearance */
+@keyframes cardLoad {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.how-to-play {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  color: red; /* Title color */
+}
+.play {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adjust gap as needed */
+  align-items: center; /* Center the cards horizontally */
+}
+
+.play .step {
+  width: 80%; /* Good width for each card */
+  height: 500px; /* Specified height for each card */
+  display: grid; /* Using grid to easily manage layout */
+  grid-template-rows: 70% 30%; /* 70% height for image, 30% for text */
+  align-items: center; /* Aligns items vertically in the center */
+  text-align: center; /* Centers text */
+  gap: 10px; /* Adjust gap between elements inside the card */
+  margin: 0 auto; /* Center the card in the page */
+}
+
+.play img {
+  width: 100%; /* Ensures image covers the width */
+  height: 100%; /* Ensures image covers the allocated 70% height */
+  object-fit: cover; /* Ensures images cover the area nicely without distortion */
+}
+
+.play div {
+  padding: 15px;
+  color: white; /* Maintains updated text color to white */
+}
+
+.highlight {
+  position: absolute; /* Adjust if necessary based on your layout */
+  top: 0;
+  width: 100%;
+  background-color: black; /* Background to make text stand out */
+  color: white;
+  font-size: 1.5em; /* Increases the font size */
+  font-weight: bold; /* Makes the font bold */
+  padding: 10px 0; /* Adds some padding */
+}
+footer {
+  background-color: #333; /* Dark background for the footer */
+  color: #fff; /* White text color */
+  text-align: center; /* Center-align the text */
+  padding: 20px 0; /* Padding around the footer content */
+}
+
+.footer-content {
+  margin: auto;
+  width: 80%; /* Adjust the width as needed */
+}
+
+.high {
+  color: #4CAF50; /* A bright color for emphasis */
+  font-weight: bold; /* Make the text bold */
+  display: block; /* Display as block to ensure it takes its own line */
+  margin: 10px 0; /* Margin for spacing */
+}
   </style>
 </head>
 
@@ -389,7 +519,7 @@
       <div class="buttons">
         <a href="index.html"><span id="playbutton" class="btn">HOME</span></a><br />
       </div>
-      <h1>ABOUT THE GAME</h1>
+      <h1 class="jump-trigger">ABOUT THE GAME</h1>
     </div>
 
     <h3>
@@ -410,7 +540,7 @@
       </p>
       <br /><br /><br />
 
-      <h3>Explore and Discover</h3>
+      <h3 class="jump-trigger">Explore and Discover</h3>
       <ul class="explore">
         <li>
           <span class="highlight">
@@ -440,72 +570,49 @@
         </li>
       </ul>
       <br /><br /><br />
-      <h3>
-        <div class="bounce">How to Play?</div>
-      </h3>
+<section class="how-to-play ">
+  <h3 class="title">How to Play?</h3>
 
-      <ul>
-        <div class="step1">
-          <img src="1.png" alt="Start Your Adventure" />
-          <div>
-            <span class="highlight">Start Your Adventure:</span> Begin by
-            selecting "Play or Continue" to start or resume your game. If you're
-            new, choose "New Game" to begin your journey from scratch.
-          </div>
-        </div>
-        <br />
-        <div class="step">
-          <img src="2.png" alt="Combine Elements" />
-          <div>
-            <span class="highlight">Combine Elements:</span> You will start with
-            a set of basic elements. Drag and drop one element onto another to
-            attempt a combination. If a valid combination is made, a new element
-            is created.
-          </div>
-        </div>
-        <br />
-        <div class="step">
-          <img src="4.png" alt="Track Your Progress" />
-          <div>
-            <span class="highlight">Track Your Progress:</span> Your element box
-            keeps track of all discovered elements. Review your collection and
-            read up on the facts about each element you've created.
-          </div>
-        </div>
-        <br />
-        <div class="step">
-          <img src="3.png" alt="Discover and Learn" />
-          <div>
-            <span class="highlight">Discover and Learn:</span> When you create a
-            new element, a pop-up box will appear with details and interesting
-            facts about it. The new element is added to your element box,
-            expanding your collection.
-          </div>
-        </div>
-        <br />
-        <div class="step">
-          <img src="5.png" alt="Advance Through Levels" />
-          <div>
-            <span class="highlight">Advance Through Levels:</span> Each level
-            challenges you to discover 100 new elements. As you progress,
-            combinations become more complex, requiring creative thinking and
-            experimentation.
-          </div>
-        </div>
-        <br />
+  <ul class="play">
+    <li class="step">
+      <img src="1.png" alt="Start Your Adventure" />
+      <div>
+        <span class="highlight">Start Your Adventure:</span> Begin by selecting "Play or Continue" to start or resume your game. If you're new, choose "New Game" to begin your journey from scratch.
+      </div>
+    </li>
+    <li class="step">
+      <img src="2.png" alt="Combine Elements" />
+      <div>
+        <span class="highlight">Combine Elements:</span> You will start with a set of basic elements. Drag and drop one element onto another to attempt a combination. If a valid combination is made, a new element is created.
+      </div>
+    </li>
 
-        <li>
-          <span class="highlight">Stay Engaged:</span> Use the "Sound On/Off"
-          button to enhance your gaming experience with immersive sound effects.
-          Visit the "About" section for more information on game mechanics and
-          tips.
-        </li>
-      </ul>
+    <li class="step">
+      <img src="3.png" alt="Discover and Learn" />
+      <div>
+        <span class="highlight">Discover and Learn:</span> When you create a new element, a pop-up box will appear with details and interesting facts about it. The new element is added to your element box, expanding your collection.
+      </div>
+    </li>
+        <li class="step">
+      <img src="4.png" alt="Track Your Progress" />
+      <div>
+        <span class="highlight">Track Your Progress:</span> Your element box keeps track of all discovered elements. Review your collection and learn more about each element.
+      </div>
+    </li>
+    <li class="step">
+      <img src="5.png" alt="Advance Through Levels" />
+      <div>
+        <span class="highlight">Advance Through Levels:</span> Each level challenges you to discover 100 new elements. As you progress, combinations become more complex, requiring creative thinking and experimentation.
+      </div>
+    </li>
+  </ul>
+
+
       <br /><br /><br />
 
-      <h3>Features</h3>
+      <h3 class="jump-trigger">Features</h3>
 
-      <ul class="features">
+      <ul class="features" >
         <li>
           <span class="highlight">Engaging Gameplay:</span> Drag, drop, and
           combine elements in a user-friendly interface designed to make
@@ -530,7 +637,7 @@
       </ul>
       <br /><br /><br />
 
-      <h3>Why Physi-c-Tech?</h3>
+      <h3 class="jump-trigger">Why Physi-c-Tech?</h3>
       <ul class="why">
         <li>
           <span class="highlight">Innovative Learning Tool:</span> Physi-c-Tech
@@ -560,12 +667,26 @@
         experience.
       </p>
 
-      <p>
-        <span class="highlight">Start your journey now and see how many elements you can
-          discover!</span>
-      </p>
+<footer>
+  <div class="footer-content">
+    <span class="high">Start your journey now and see how many elements you can discover!</span>
+    <!-- Additional footer content here -->
+  </div>
+</footer>
     </div>
   </div>
+  <!-- // JS for the Jump effect -->
+  <script>
+document.querySelectorAll('.jump-trigger').forEach(item => {
+  item.addEventListener('click', function() {
+    this.classList.add('jump');
+    // Remove the class after the animation completes
+    setTimeout(() => {
+      this.classList.remove('jump');
+    }, 500); // Adjust timeout to match animation duration
+  });
+});
+</script>
 </body>
 
 </html>
