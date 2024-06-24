@@ -1,12 +1,9 @@
-*{
-  cursor: url('./svg/CURSOR1.png'),auto;
-}
-
 body {
   margin: 0;
   font-family: sans-serif;
   font-size: 10px;
   overflow: hidden;
+  cursor: url('./svg/CURSOR1.png'),auto;
 }
 
 button {
