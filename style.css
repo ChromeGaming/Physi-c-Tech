@@ -1,3 +1,7 @@
+*{
+  cursor: url('./svg/CURSOR1.png'),auto;
+}
+
 body {
   margin: 0;
   font-family: sans-serif;
