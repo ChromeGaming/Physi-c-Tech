@@ -38,7 +38,7 @@
       "
     >
       <div id="homecontent">
-        <h1 class="focusin" >Physi-c<br />Tech</h1>
+        <h1 class="focusin">Physi-c<br />Tech</h1>
         <div class="buttons">
           <span id="playbutton" class="btn" onclick="play()">PLAY</span><br />
           <span id="newgamebutton" class="btn" onclick="newgame()"
@@ -53,6 +53,10 @@
         </div>
       </div>
     </div>
+
+    <button id="feedbackButton" class="feedback-btn" onclick="handleFeedback()">
+      Facing an Issue? Help Us Improve!
+    </button>
 
     <div id="collection" class="trophy">
       <div id="wincontent" class="trophy">
@@ -93,7 +97,9 @@
     <div class="outer">
       <div class="upper">
         <div id="btnhome">
-          <button id="homebutton" style="cursor: pointer" title="Home">🛖</button>
+          <button id="homebutton" style="cursor: pointer" title="Home">
+            🛖
+          </button>
         </div>
         <div id="title">
           <h1><span id="score">0</span>/<span id="max">0</span> discovered</h1>
@@ -101,14 +107,26 @@
         <div id="btnhint">
           <button
             id="hint"
-            style="opacity: 0.3; font-size: 30px; cursor: pointer" title="Hint"
+            style="opacity: 0.3; font-size: 30px; cursor: pointer"
+            title="Hint"
           >
             💡
           </button>
         </div>
-		<div id="btnsound"><button id="soundbutton2" onclick="toggleSound2()" style="cursor: pointer;" title="Sound">🔊</button></div>
+        <div id="btnsound">
+          <button
+            id="soundbutton2"
+            onclick="toggleSound2()"
+            style="cursor: pointer"
+            title="Sound"
+          >
+            🔊
+          </button>
+        </div>
         <div id="btncollection">
-          <span id="collectionbutton" style="cursor: pointer" title="Collection">🏅</span>
+          <span id="collectionbutton" style="cursor: pointer" title="Collection"
+            >🏅</span
+          >
           <div id="collectionnumbers">0/13</div>
         </div>
       </div>
@@ -164,7 +182,11 @@
           </button>
         </div>
         <div class="lower-content">
-          <img src="./images/scientist.png" alt="" style="height: 90px; width: 90px" />
+          <img
+            src="./images/scientist.png"
+            alt=""
+            style="height: 90px; width: 90px"
+          />
           <p id="speech-text">Hello, tech-enthusiasts!</p>
         </div>
         <div class="lower-button">
@@ -174,10 +196,6 @@
         </div>
       </div>
     </div>
-
-    <button id="feedbackButton" onclick="handleFeedback()">
-      Facing an Issue? Help Us Improve!
-    </button>
 
     <script src="./js/preloader.js"></script>
     <script src="./js/elements.js"></script>
