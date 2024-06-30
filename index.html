@@ -1,200 +1,141 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="monetization" content="$ilp.uphold.com/U9iHfppnha6L" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="monetization" content="$ilp.uphold.com/U9iHfppnha6L">
     <title>Physi-c Tech</title>
 
-    <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="icon" href="./images/atom.png" type="image/png" />
-  </head>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="icon" href="./images/atom.png" type="image/png">
+</head>
 
-  <body>
+<body>
     <div class="preloader">
-      <div class="circle"></div>
+        <div class="circle"></div>
     </div>
 
     <canvas id="ctmp" width="100" height="100" style="display: none"></canvas>
-    <canvas
-      id="homecanvas"
-      width="400"
-      height="600"
-      style="display: none"
-    ></canvas>
+    <canvas id="homecanvas" width="400" height="600" style="display: none"></canvas>
 
-    <div
-      id="home"
-      style="
-        background-image: url(https://i.pinimg.com/originals/e6/c9/e3/e6c9e3d891aa56637847ba09c28fa00c.jpg);
-        background-size: cover;
-      "
-    >
-      <div id="homecontent">
-        <h1 class="focusin">Physi-c<br />Tech</h1>
-        <div class="buttons">
-          <span id="playbutton" class="btn" onclick="play()">PLAY</span><br />
-          <span id="newgamebutton" class="btn" onclick="newgame()"
-            >NEW GAME</span
-          ><br />
-          <span id="soundbutton" class="btn" onclick="toggleSound()"
-            >SOUND ON</span
-          ><br />
-          <span class="btn" onclick="window.location.href='about.html'"
-            >ABOUT</span
-          ><br />
+    <div id="home" style="background-image: url(https://i.pinimg.com/originals/e6/c9/e3/e6c9e3d891aa56637847ba09c28fa00c.jpg); background-size: cover;">
+        <div id="homecontent">
+            <h1 class="focusin">Physi-c<br>Tech</h1>
+            <div class="buttons">
+                <span id="playbutton" class="btn" onclick="play()">PLAY</span><br>
+                <span id="newgamebutton" class="btn" onclick="newgame()">NEW GAME</span><br>
+                <span id="soundbutton" class="btn" onclick="toggleSound()">SOUND ON</span><br>
+                <span class="btn" onclick="window.location.href='about.html'">ABOUT</span><br>
+            </div>
         </div>
-      </div>
     </div>
 
-    <button id="feedbackButton" class="feedback-btn" onclick="handleFeedback()">
-      Facing an Issue? Help Us Improve!
-    </button>
+    <button id="feedbackButton" class="feedback-btn" onclick="handleFeedback()">Facing an Issue? Help Us Improve!</button>
 
     <div id="collection" class="trophy">
-      <div id="wincontent" class="trophy">
-        <h1>100% COMPLETE!</h1>
-        <h1>🏆</h1>
-        <h2 id="moves"></h2>
-        <span id="newgamebutton2">NEW GAME?</span>
-      </div>
-      <div id="collectioncontent" class="trophy"></div>
-      <div id="finalcontent" class="trophy"></div>
+        <div id="wincontent" class="trophy">
+            <h1>100% COMPLETE!</h1>
+            <h1>🏆</h1>
+            <h2 id="moves"></h2>
+            <span id="newgamebutton2">NEW GAME?</span>
+        </div>
+        <div id="collectioncontent" class="trophy"></div>
+        <div id="finalcontent" class="trophy"></div>
     </div>
 
     <div id="modal" class="modal">
-      <div id="modalcontent" class="modal">
-        <div class="cross">
-          <div class="upper-cross" style="padding: 4px">
-            <button
-              onclick="document.getElementById('modal').style.display='none'"
-            >
-              <i class="fa-solid fa-xmark fa-beat" style="color: white"> </i>
-            </button>
-          </div>
+        <div id="modalcontent" class="modal">
+            <div class="cross">
+                <div class="upper-cross" style="padding: 4px">
+                    <button onclick="document.getElementById('modal').style.display='none'">
+                        <i class="fa-solid fa-xmark fa-beat" style="color: white"> </i>
+                    </button>
+                </div>
+            </div>
+            <h1 id="discovery" class="modal"></h1>
+            <div class="modal">
+                <img id="discoveryimage" class="modal" src="" width="100" height="100">
+            </div>
+            <h2 class="modal" id="discoverydesc" style="padding: 10%"></h2>
         </div>
-        <h1 id="discovery" class="modal"></h1>
-        <div class="modal">
-          <img
-            id="discoveryimage"
-            class="modal"
-            src=""
-            width="100"
-            height="100"
-          />
-        </div>
-        <h2 class="modal" id="discoverydesc" style="padding: 10%"></h2>
-      </div>
     </div>
 
     <div class="outer">
-      <div class="upper">
-        <div id="btnhome">
-          <button id="homebutton" style="cursor: pointer" title="Home">
-            🛖
-          </button>
-        </div>
-        <div id="title">
-          <h1><span id="score">0</span>/<span id="max">0</span> discovered</h1>
-        </div>
-        <div id="btnhint">
-          <button
-            id="hint"
-            style="opacity: 0.3; font-size: 30px; cursor: pointer"
-            title="Hint"
-          >
-            💡
-          </button>
-        </div>
-        <div id="btnsound">
-          <button
-            id="soundbutton2"
-            onclick="toggleSound2()"
-            style="cursor: pointer"
-            title="Sound"
-          >
-            🔊
-          </button>
-        </div>
-        <div id="btncollection">
-          <span id="collectionbutton" style="cursor: pointer" title="Collection"
-            >🏅</span
-          >
-          <div id="collectionnumbers">0/13</div>
-        </div>
-      </div>
-      <div id="modal" class="modal">
-        <div id="modalcontent" class="modal">
-          <div class="cross">
-            <div class="upper-cross" style="padding: 4px">
-              <button
-                onclick="document.getElementById('modal').style.display='none'"
-              >
-                <i class="fa-solid fa-xmark fa-beat" style="color: white"> </i>
-              </button>
+        <div class="upper">
+            <div id="btnhome">
+                <button id="homebutton" style="cursor: pointer" title="Home">🛖</button>
             </div>
-          </div>
-          <h1 id="discovery" class="modal"></h1>
-          <div class="modal">
-            <img
-              id="discoveryimage"
-              class="modal"
-              src=""
-              width="100"
-              height="100"
-            />
-          </div>
-          <h2 class="modal" id="discoverydesc" style="padding: 10%"></h2>
+            <div id="title">
+                <h1><span id="score">0</span>/<span id="max">0</span> discovered</h1>
+            </div>
+            <div id="btnhint">
+                <button id="hint" style="opacity: 0.3; font-size: 30px; cursor: pointer" title="Hint">💡</button>
+            </div>
+            <div id="btnsound">
+                <button id="soundbutton2" onclick="toggleSound2()" style="cursor: pointer" title="Sound">🔊</button>
+            </div>
+            <div id="btncollection">
+                <span id="collectionbutton" style="cursor: pointer" title="Collection">🏅</span>
+                <div id="collectionnumbers">0/13</div>
+            </div>
         </div>
-      </div>
+        <div id="modal" class="modal">
+            <div id="modalcontent" class="modal">
+                <div class="cross">
+                    <div class="upper-cross" style="padding: 4px">
+                        <button onclick="document.getElementById('modal').style.display='none'">
+                            <i class="fa-solid fa-xmark fa-beat" style="color: white"> </i>
+                        </button>
+                    </div>
+                </div>
+                <h1 id="discovery" class="modal"></h1>
+                <div class="modal">
+                    <img id="discoveryimage" class="modal" src="" width="100" height="100">
+                </div>
+                <h2 class="modal" id="discoverydesc" style="padding: 10%"></h2>
+            </div>
+        </div>
 
-      <div id="forge" class="forge drop move">
-        <div id="trash" style="cursor: pointer" title="Clear All">🚮</div>
-      </div>
+        <div id="forge" class="forge drop move">
+            <div id="trash" style="cursor: pointer" title="Clear All">🚮</div>
+        </div>
 
-      <div class="lower">
-        <div class="nav">
-          <div>
-            <button><img id="upbutton" width="40" height="80" /></button>
-          </div>
-          <div>
-            <button><img id="downbutton" width="40" height="80" /></button>
-          </div>
+        <div class="lower">
+            <div class="nav">
+                <div>
+                    <button><img id="upbutton" width="40" height="80"></button>
+                </div>
+                <div>
+                    <button><img id="downbutton" width="40" height="80"></button>
+                </div>
+            </div>
+            <div id="pantry" class="copy">
+                <!-- Add draggable elements here -->
+                <div class="draggable" draggable="true" id="drag1">Item 1</div>
+                <div class="draggable" draggable="true" id="drag2">Item 2</div>
+                <div style="position: relative; top: 5000px" id="spacer">.</div>
+            </div>
         </div>
-        <div id="pantry" class="copy">
-          <div style="position: relative; top: 5000px" id="spacer">.</div>
-        </div>
-      </div>
     </div>
 
     <div class="pop-up-container">
-      <div class="pop-up" style="display: none">
-        <div class="upper-cross" style="padding: 4px">
-          <button onclick="cross()">
-            <i class="fa-solid fa-xmark fa-beat" style="color: white"></i>
-          </button>
+        <div class="pop-up" style="display: none">
+            <div class="upper-cross" style="padding: 4px">
+                <button onclick="cross()">
+                    <i class="fa-solid fa-xmark fa-beat" style="color: white"></i>
+                </button>
+            </div>
+            <div class="lower-content">
+                <img src="./images/scientist.png" alt="" style="height: 90px; width: 90px">
+                <p id="speech-text">Hello, tech-enthusiasts!</p>
+            </div>
+            <div class="lower-button">
+                <button onclick="nextSpeech()">
+                    <i class="fa-solid fa-forward fa-bounce fa-lg"></i>
+                </button>
+            </div>
         </div>
-        <div class="lower-content">
-          <img
-            src="./images/scientist.png"
-            alt=""
-            style="height: 90px; width: 90px"
-          />
-          <p id="speech-text">Hello, tech-enthusiasts!</p>
-        </div>
-        <div class="lower-button">
-          <button onclick="nextSpeech()">
-            <i class="fa-solid fa-forward fa-bounce fa-lg"></i>
-          </button>
-        </div>
-      </div>
     </div>
 
     <script src="./js/preloader.js"></script>
@@ -204,5 +145,5 @@
     <script src="./js/svg.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/description.js"></script>
-  </body>
+</body>
 </html>
