@@ -21,3 +21,38 @@ if (document.monetization) {
 		hintTime = 10000;
 	})
 }
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const draggables = document.querySelectorAll('.draggable');
+    const dropContainer = document.getElementById('forge');
+
+    draggables.forEach(draggable => {
+        draggable.addEventListener('dragstart', dragStart);
+        draggable.addEventListener('dragend', dragEnd);
+    });
+
+    dropContainer.addEventListener('dragover', dragOver);
+    dropContainer.addEventListener('drop', drop);
+
+    function dragStart(e) {
+        e.dataTransfer.setData('text/plain', e.target.id);
+        setTimeout(() => {
+            e.target.classList.add('hide');
+        }, 0);
+    }
+
+    function dragEnd(e) {
+        e.target.classList.remove('hide');
+    }
+
+    function dragOver(e) {
+        e.preventDefault();
+    }
+
+    function drop(e) {
+        e.preventDefault();
+        const id = e.dataTransfer.getData('text');
+        const draggable = document.getElementById(id);
+        e.target.appendChild(draggable);
+    }
+});
