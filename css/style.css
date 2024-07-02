@@ -1,3 +1,7 @@
+
+*{
+  cursor: url('/images/CURSOR1.png'),auto;
+}
 body {
   margin: 0;
   font-family: sans-serif;
@@ -52,11 +56,11 @@ button {
   cursor: pointer;
 }
 
-.cross{
+.cross {
   display: flex;
   justify-content: flex-end;
 }
-.cross .upper-cross button{
+.cross .upper-cross button {
   background-color: red;
   border-radius: 50%;
   height: 35px;
@@ -64,7 +68,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .pop-up .lower-content {
@@ -164,7 +168,7 @@ button {
   display: grid;
   grid-gap: 0;
   overflow: hidden;
-  max-height: 900px; 
+  max-height: 900px;
 }
 
 .lower {
@@ -184,38 +188,32 @@ button {
   grid-column-end: 2;
   text-align: left;
 }
-#feedbackButton:hover
-{
-    
-    cursor: pointer; /* changes cursor to pointer on hover */
-    text-decoration: underline; /* adds underline on hover (optional) */
-    color:cadetblue; /* change color on hover (optional) */
-    
+#feedbackButton:hover {
+  cursor: pointer; /* changes cursor to pointer on hover */
+  text-decoration: underline; /* adds underline on hover (optional) */
+  color: cadetblue; /* change color on hover (optional) */
 }
-
-
 
 #homebutton:hover {
   transition: transform 0.2s ease-in-out;
-  transform: scale(1.2);  /* Increase size on hover (adjust as desired) */
+  transform: scale(1.2); /* Increase size on hover (adjust as desired) */
 }
 #collectionbutton:hover {
   transition: transform 0.2s ease-in-out;
-  transform: scale(1.2);  /* Increase size on hover (adjust as desired) */
+  transform: scale(1.2); /* Increase size on hover (adjust as desired) */
 }
 #hint:hover {
   transition: transform 0.2s ease-in-out;
-  transform: scale(1.2);  /* Increase size on hover (adjust as desired) */
+  transform: scale(1.2); /* Increase size on hover (adjust as desired) */
 }
 #soundbutton2:hover {
   transition: transform 0.2s ease-in-out;
-  transform: scale(1.2);  /* Increase size on hover (adjust as desired) */
+  transform: scale(1.2); /* Increase size on hover (adjust as desired) */
 }
 #trash:hover {
   transition: transform 0.2s ease-in-out;
-  transform: scale(1.1);  /* Increase size on hover (adjust as desired) */
+  transform: scale(1.1); /* Increase size on hover (adjust as desired) */
 }
-
 
 #homebutton,
 #collectionbutton {
@@ -299,8 +297,7 @@ button {
   text-align: center;
   vertical-align: middle;
   font-size: 18px;
-  display: none; 
-
+  display: none;
 }
 
 #homecontent {
@@ -311,8 +308,9 @@ button {
   height: 100%;
   text-align: center;
   font-size: 2.5em;
-  font-style: italic;  overflow-y: auto; /* Enable vertical scrolling */
-  height: 100vh
+  font-style: italic;
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: 100vh;
 }
 /* Style the scrollbar - Chrome, Safari */
 #homecontent::-webkit-scrollbar {
@@ -372,9 +370,9 @@ button {
 }
 
 .focusin {
-    animation-name: focus;
-    animation-duration: 1.5s;
-    font-family: "Silkscreen", sans-serif;
+  animation-name: focus;
+  animation-duration: 1.5s;
+  font-family: "Silkscreen", sans-serif;
 
   font-weight: 400;
   font-style: normal;
@@ -383,12 +381,11 @@ button {
   font-family: Impact, Arial Black;
   padding-top: 150px;
 
-    font-weight: 400;
-    font-style: normal;
-    animation-name: focus;
-    animation-duration: 1.5s;
-    font-family: Impact, Arial Black;
-
+  font-weight: 400;
+  font-style: normal;
+  animation-name: focus;
+  animation-duration: 1.5s;
+  font-family: Impact, Arial Black;
 }
 
 #trash {
@@ -447,8 +444,8 @@ button {
 }
 
 #soundbutton2 {
-  font-size: 30px;   
-  cursor: pointer; 
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .buttons .btn::after {
@@ -465,60 +462,58 @@ button {
 .buttons .btn:hover::after {
   transform: scaleX(1.01) translateY(-15px);
 }
-.buttons{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: "Silkscreen", sans-serif;
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Silkscreen", sans-serif;
   font-weight: 400;
   font-style: normal;
-  }
-  
-  .buttons .btn {
-    position: relative;
-    width:140px;
-    height:20px;
-    cursor: pointer;
-    padding:17px;
-    align-items: center;
-    background: none;
-    border: none;
-    color: #fff;
-    font-weight: 500;
-    font-size: 18px;
-    
-  }
-  .buttons .btn::before,
-  .buttons .btn::after{
-    position: absolute;
-    content: '';
-    top:0;
-    left: 0;
-    width:100%;
-    height: 100%;
-    backdrop-filter:blur(15px);
-    background: rgba(253, 251, 251, 0.049);
-    border-radius: 10px;
-    box-shadow: 20px 20px 50px rgba(74, 65, 57, 0.5);
-    z-index: -2;
-  }
-  .buttons .btn::after{
-    width: 110%;
-    height: 90%;
-    top:25%;
-    left:-5%;
-    z-index: -3;
-    transform: scaleX(0.5);
-    transition: all 0.6s;
-    background: linear-gradient(135deg,#f47f0a,#ff045c);
-  }
-  
-  
-  .buttons .btn:hover:after{
-    transform: scaleX(1.01) translateY(-15px);
-  }
-  
+}
+
+.buttons .btn {
+  position: relative;
+  width: 140px;
+  height: 20px;
+  cursor: pointer;
+  padding: 17px;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+}
+.buttons .btn::before,
+.buttons .btn::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(15px);
+  background: rgba(253, 251, 251, 0.049);
+  border-radius: 10px;
+  box-shadow: 20px 20px 50px rgba(74, 65, 57, 0.5);
+  z-index: -2;
+}
+.buttons .btn::after {
+  width: 110%;
+  height: 90%;
+  top: 25%;
+  left: -5%;
+  z-index: -3;
+  transform: scaleX(0.5);
+  transition: all 0.6s;
+  background: linear-gradient(135deg, #f47f0a, #ff045c);
+}
+
+.buttons .btn:hover:after {
+  transform: scaleX(1.01) translateY(-15px);
+}
+
 .movie {
   border: 4px solid #000;
 }
@@ -527,27 +522,24 @@ a {
   color: #fff;
 }
 
+@media (max-width: 425px) {
+  .pop-up {
+    height: 170px;
+    width: 80%;
+    border: 3px solid black;
+    z-index: 1000;
+    position: fixed;
+    top: 30%;
+    left: 10%;
+    background-color: white;
 
-@media (max-width: 425px){
-    .pop-up{
-        height:170px;
-        width:80%;
-        border:3px solid black;
-        z-index: 1000;
-        position: fixed;
-        top:30%;
-        left: 10%;
-        background-color: white;
+    display: flex;
 
-        
-        display: flex;
-        
-        flex-direction: column;
-    
-        border-radius: 20px;
-    }
+    flex-direction: column;
+
+    border-radius: 20px;
+  }
 }
-
 
 @media (max-width: 1024px) {
   .pop-up {
@@ -557,7 +549,6 @@ a {
     left: 10%;
   }
 }
-
 
 @media (max-width: 768px) {
   .pop-up {
@@ -593,14 +584,15 @@ a {
   }
 }
 
-@media ( max-width:1100px){
-  .focusin{
-    padding-top:90px;
+@media (max-width: 1100px) {
+  .focusin {
+    padding-top: 90px;
   }
   .buttons .btn {
     width: 130px;
     height: 17px;
     padding: 16px;
+  }
 }
 
 .preloader {
@@ -621,7 +613,8 @@ a {
   height: 200px;
   background-color: black;
   border-radius: 50%;
-  animation: circleAnimation 2s infinite linear, glowingBorder 2s infinite linear;
+  animation: circleAnimation 2s infinite linear,
+    glowingBorder 2s infinite linear;
   box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.8);
 }
 
@@ -635,7 +628,8 @@ a {
   border-radius: 50%;
   border: 3px solid transparent;
   border-top-color: hsl(357, 87%, 38%);
-  animation: circleAnimation 2s infinite linear, glowingBorder 2s infinite linear;
+  animation: circleAnimation 2s infinite linear,
+    glowingBorder 2s infinite linear;
 }
 
 .circle:after {
@@ -648,7 +642,8 @@ a {
   border-radius: 50%;
   border: 3px solid transparent;
   border-top-color: hsl(357, 93%, 49%);
-  animation: circleAnimation 2s infinite linear, glowingBorder 2s infinite linear;
+  animation: circleAnimation 2s infinite linear,
+    glowingBorder 2s infinite linear;
 }
 
 @keyframes circleAnimation {
@@ -676,17 +671,28 @@ a {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #ff5c5c;
+  background-color: #fc4f4f;
   color: white;
   border: none;
-  padding: 15px 20px;
+  padding: 15px 15px 18px 18px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
-  z-index: 10000;
+  font-size: 20px;
+  z-index: 1000;
+  border-radius: 5px;
 }
 
 #feedbackButton:hover {
-  background-color: #ff3333;
+  background: linear-gradient(to top right, rgb(250, 4, 4), rgb(248, 35, 70));
+  text-decoration: none;
+  color: white;
 }
+
+@media (max-width: 768px) {
+  #feedbackButton {
+    bottom: 40px;
+    right: 20px;
+    padding: 12px 12px 15px 15px;
+    font-size: 18px;
+  }
 }

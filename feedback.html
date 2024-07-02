@@ -1,66 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback - Physi-c Tech</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="./images/atom.png" type="image/png" />
+    <link rel="stylesheet" href="./css/feedback.css" />
+  </head>
+  <body>
+    <div class="feedback-container">
+      <h2>Help Us Improve!</h2>
+      <form id="feedback-form" onsubmit="submitFeedback(event)">
+        <label for="name" class="starArea">Name:</label>
+        <input type="text" id="name" name="name" required />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feedback - Physi-c Tech</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="icon" href="./atom.png" type="image/png" />
-  <link rel="stylesheet" href="feedback.css">
-   <script>
-    function handleSubmit(event) {
-      event.preventDefault(); // Prevent default form submission
-      // Display confirmation message
-      alert("Thank you for your feedback!");
-      // Reset the form
-      event.target.reset();
-    }
-  </script>
-</head>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
 
-<body>
-  <div class="feedback-container">
-    <h2>Help Us Improve!</h2>
-    <form>
-      <label for="name" class="starArea">Name:</label>
-      <input type="text" id="name" name="name" required>
+        <label for="rating">Rating:</label>
+        <div class="star-rating">
+          <input type="radio" id="star5" name="rating" value="5" />
+          <label for="star5" title="5 stars">&#9733;</label>
+          <input type="radio" id="star4" name="rating" value="4" />
+          <label for="star4" title="4 stars">&#9733;</label>
+          <input type="radio" id="star3" name="rating" value="3" />
+          <label for="star3" title="3 stars">&#9733;</label>
+          <input type="radio" id="star2" name="rating" value="2" />
+          <label for="star2" title="2 stars">&#9733;</label>
+          <input type="radio" id="star1" name="rating" value="1" />
+          <label for="star1" title="1 star">&#9733;</label>
+        </div>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+        <label for="issue">Issue Type:</label>
+        <select id="issue" name="issue">
+          <option value="bug">Bug</option>
+          <option value="suggestion">Suggestion</option>
+          <option value="other">Other</option>
+        </select>
 
-      <label for="rating">Rating:</label>
-      <div class="star-rating">
-        <input type="radio" id="star5" name="rating" value="5">
-        <label for="star5" title="5 stars">&#9733;</label>
-        <input type="radio" id="star4" name="rating" value="4">
-        <label for="star4" title="4 stars">&#9733;</label>
-        <input type="radio" id="star3" name="rating" value="3">
-        <label for="star3" title="3 stars">&#9733;</label>
-        <input type="radio" id="star2" name="rating" value="2">
-        <label for="star2" title="2 stars">&#9733;</label>
-        <input type="radio" id="star1" name="rating" value="1">
-        <label for="star1" title="1 star">&#9733;</label>
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments"></textarea>
+
+        <button type="submit">Submit Feedback</button>
+      </form>
+      <div class="back-button">
+        <a href="index.html">&larr; Back to Home</a>
       </div>
-
-      <label for="issue">Issue Type:</label>
-      <select id="issue" name="issue">
-        <option value="bug">Bug</option>
-        <option value="suggestion">Suggestion</option>
-        <option value="other">Other</option>
-      </select>
-
-      <label for="comments">Comments:</label>
-      <textarea id="comments" name="comments" required></textarea>
-
-      <button type="submit">Submit Feedback</button>
-    </form>
-    <div class="back-button">
-      <a href="index.html">&larr; Back to Home</a>
     </div>
-  </div>
-</body>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/feedback.js"></script>
+  </body>
 </html>

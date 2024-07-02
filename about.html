@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/atom.png" type="image/png" />
+    <title>About</title>
+    <style>
+      * {
+        cursor: url("/images/CURSOR1.png"), auto;
+      }
+      body {
+        background-color: #121212;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #f0f3ff;
+        margin: 0;
+        padding: 50px;
+        text-align: justify;
+        text-justify: inter-word;
+        background-image: url("https://i.pinimg.com/originals/e6/c9/e3/e6c9e3d891aa56637847ba09c28fa00c.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-attachment: fixed;
+      }
+      /* Custom Scrollbar Styles */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="./atom.png" type="image/png" />
-  <title>About</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
-  <style>
+
     body {
       background-color: #121212;
       font-family: Arial, Helvetica, sans-serif;
@@ -261,351 +281,549 @@
 
       to {
         width: 100%;
-      }
-    }
-
-    @keyframes blink-caret {
-
-      from,
-      to {
-        border-color: transparent;
-        border-width: 1px;
+      ::-webkit-scrollbar-track {
+        background: #000;
       }
 
-      50% {
-        border-color: #f0f3ff;
-      }
-    }
-
-    .bounce {
-      animation: bounce 0.4s ease infinite alternate;
-      -webkit-animation: bounce 0.4s ease infinite alternate;
-    }
-
-    @keyframes bounce {
-      0% {
-        text-shadow: 0 5px 0 #ccc, 0 2px 3px rgba(0, 0, 0, 1);
+      ::-webkit-scrollbar-thumb {
+        background-color: #d61c1c;
+        border: 1px solid black;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
       }
 
-      100% {
-        transform: translateY(-20px);
-        text-shadow: 0 50px 0 #000, 0 0 20px rgba(0, 0, 0, 0.8);
-      }
-    }
-
-    @-webkit-keyframes bounce {
-      0% {
-        text-shadow: 0 5px 0 #ccc, 0 2px 3px rgba(0, 0, 0, 1);
+      ::-webkit-scrollbar-thumb:hover {
+        outline: none;
+        border-color: red;
+        border-radius: 10px;
+        box-shadow: 0 0 10px darkred;
       }
 
-      100% {
-        -webkit-transform: translateY(-20px);
-        text-shadow: 0 50px 0 #000, 0 0 20px rgba(0, 0, 0, 0.8);
-      }
-    }
+      #homecontent {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
 
-    @media screen and (max-width: 600px) {
+        color: #fff;
+        width: 90%;
+        height: 100%;
+        text-align: left;
+        font-size: 2.5em;
+      }
+
       #homecontent h1 {
-        margin-left: 10px;
-        margin-top: 1px;
-        font-size: 25px;
+        margin-left: 26%;
+        color: #ff5c5c;
       }
 
-      .step,
-      .step1 {
+      #homecontent span,
+      #homecontent div {
+        font-style: normal;
+      }
+
+      .buttons {
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: left;
+        justify-content: center;
       }
 
-      .step img,
-      .step1 img {
-        width: 80%;
+      .buttons .btn {
+        position: relative;
+        width: 140px;
+        height: 20px;
+        cursor: pointer;
+        padding: 17px;
+        padding-left: 26px;
+        padding-right: 26spx;
+        align-items: center;
+        background: none;
+        border: none;
+        color: #fff;
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 10px;
+        z-index: 1;
+      }
+
+      .buttons a {
+        text-decoration: none;
+      }
+
+      .buttons .btn::before,
+      .buttons .btn::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(15px);
+        background: rgba(253, 251, 251, 0.049);
+        border-radius: 10px;
+        box-shadow: 20px 20px 50px rgba(74, 65, 57, 0.5);
+        z-index: -2;
+      }
+
+      .buttons .btn::after {
+        width: 99%;
+        height: 75%;
+        top: 25%;
+        left: 0.5%;
+        z-index: -3;
+        transform: scaleX(0.5);
+        transition: all 0.3s;
+        background: linear-gradient(135deg, #f47f0a, #ff045c);
+      }
+
+      .buttons .btn:hover:after {
+        transform: scaleX(1.01) translateY(-15px);
+      }
+
+      h1,
+      h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         margin: 10px 0;
       }
 
       h1 {
-        font-size: 36px;
+        font-size: 50px;
+        color: #ff6347;
       }
 
       h3 {
-        font-size: 24px;
+        font-size: 30px;
+        color: gold;
       }
 
-      p,
-      li {
-        font-size: 18px;
+      p {
+        font-size: 20px;
+        line-height: 1.6;
+        margin: 20px auto;
       }
 
       ul {
+        list-style-type: none;
+
+        padding: 20px;
+        margin: 20px auto;
+      }
+
+      ul.explore,
+      ul.features,
+      ul.why {
+        list-style-type: none;
+        padding: 20px;
+        border: 1px solid #f0f3ff;
+        border-radius: 25px;
+        margin: 20px auto;
+        background-color: #151515;
+      }
+
+      li {
+        margin: 10px 0;
+        font-size: 20px;
+      }
+
+      .explore li,
+      .features li,
+      .why li {
+        padding-bottom: 10px;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .highlight {
+        color: #f43636;
+        font-weight: 900;
+        text-decoration: underline;
+      }
+
+      .welcome {
+        line-height: 45px;
+      }
+
+      .welcome .highlight {
+        display: contents;
+      }
+
+      .popup {
+        background-color: #282828;
+        border: 2px solid #f43636;
         padding: 10px;
-        margin: 10px auto;
+        margin: 20px;
+        border-radius: 10px;
+      }
+
+      .step {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+        font-size: 20px;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+      }
+
+      .step img {
+        width: 50%;
+        margin-right: 50px;
+        margin-top: 30px;
+        border-radius: 10px;
+      }
+
+      .step1 {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+        font-size: 20px;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+      }
+
+      .step1 img {
+        max-width: 250px;
+        margin-top: 30px;
+        margin-right: 50px;
+        border-radius: 10px;
       }
 
       .typewriter {
-        font-size: 20px;
-        width: 100%;
-        margin: 0;
-        text-align: center;
+        overflow: hidden;
+        border-right: 0.15em solid #f0f3ff;
+        white-space: nowrap;
+        margin: 0 auto;
+        letter-spacing: 0.15em;
+        animation: typing 3.5s steps(30, end),
+          blink-caret 0.5s step-end infinite;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       }
 
-      .buttons .btn {
-        width: 120px;
-        /* Adjust the width */
-        height: 15px;
-        /* Adjust the height */
-        padding: 14px;
-        /* Adjust the padding */
-        font-size: 16px;
-        /* Adjust the font size */
-        margin-bottom: 8px;
-        /* Adjust the margin bottom */
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+
+        to {
+          width: 100%;
+        }
       }
-    }
 
-    .fullCont {
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 20px;
-      box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
-      animation: fadeIn 2s ease-in-out;
-      border-radius: 20px;
-    }
-    @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-  
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-  }
-  #myBtn {
-    position: fixed;
-    bottom: 20px;
-    padding:15px;
-    padding-right: 0px;
-    z-index: 99;
-    background-color: black;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 0 10px darkred;
-    animation: float 6s ease-out infinite;
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+          border-width: 1px;
+        }
 
-}
-@keyframes float {
-  0%{
-    transform: translateY(0px);
-  }
-  50%{
-  transform: translateY(-20px);
-  }
-  100%{
-    transform: translateY(0px);
-  }
-}
+        50% {
+          border-color: #f0f3ff;
+        }
+      }
 
-  #myBtn:hover {
-    background-color: black;
-    box-shadow: 0 0 50px darkred;
-  }
+      .bounce {
+        animation: bounce 0.4s ease infinite alternate;
+        -webkit-animation: bounce 0.4s ease infinite alternate;
+      }
 
-  #myBtn i {
-    font-size: 15px;
-    margin-right: 14px;
-  }
-  </style>
-</head>
+      @keyframes bounce {
+        0% {
+          text-shadow: 0 5px 0 #ccc, 0 2px 3px rgba(0, 0, 0, 1);
+        }
 
-<body>
-  <div class="fullCont">
-    <div id="homecontent">
-      <div class="buttons">
-        <a href="index.html"><span id="playbutton" class="btn">HOME</span></a><br />
+        100% {
+          transform: translateY(-20px);
+          text-shadow: 0 50px 0 #000, 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+      }
+
+      @-webkit-keyframes bounce {
+        0% {
+          text-shadow: 0 5px 0 #ccc, 0 2px 3px rgba(0, 0, 0, 1);
+        }
+
+        100% {
+          -webkit-transform: translateY(-20px);
+          text-shadow: 0 50px 0 #000, 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        #homecontent h1 {
+          margin-left: 10px;
+          margin-top: 1px;
+          font-size: 25px;
+        }
+
+        .step,
+        .step1 {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .step img,
+        .step1 img {
+          width: 80%;
+          margin: 10px 0;
+        }
+
+        h1 {
+          font-size: 36px;
+        }
+
+        h3 {
+          font-size: 24px;
+        }
+
+        p,
+        li {
+          font-size: 18px;
+        }
+
+        ul {
+          padding: 10px;
+          margin: 10px auto;
+        }
+
+        .typewriter {
+          font-size: 20px;
+          width: 100%;
+          margin: 0;
+          text-align: center;
+        }
+
+        .buttons .btn {
+          width: 120px;
+          /* Adjust the width */
+          height: 15px;
+          /* Adjust the height */
+          padding: 14px;
+          /* Adjust the padding */
+          font-size: 16px;
+          /* Adjust the font size */
+          margin-bottom: 8px;
+          /* Adjust the margin bottom */
+        }
+      }
+
+      .fullCont {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+        animation: fadeIn 2s ease-in-out;
+        border-radius: 20px;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="fullCont">
+      <div id="homecontent">
+        <div class="buttons">
+          <a href="index.html"><span id="playbutton" class="btn">HOME</span></a
+          ><br />
+        </div>
+        <h1>ABOUT THE GAME</h1>
       </div>
-      <h1>ABOUT THE GAME</h1>
-    </div>
 
-    <h3>
-      <div class="typewriter">
-        Welcome to&nbsp;<span class="highlight">Physi-c-Tech</span>: The
-        Ultimate Elemental Adventure!
-      </div>
-    </h3>
-
-    <div class="content">
-      <p>
-        Dive into a thrilling journey where physics meets technology in the most
-        interactive and educational game ever created!
-        <span class="highlight">Physi-c-Tech</span> is designed to ignite your
-        curiosity, challenge your intellect, and broaden your understanding of
-        the world around you through the exciting process of element discovery
-        and combination.
-      </p>
-      <br /><br /><br />
-
-      <h3>Explore and Discover</h3>
-      <ul class="explore">
-        <li>
-          <span class="highlight">
-            <center>Dynamic Combinations</center>
-          </span><br />
-          Start with basic elements and combine them to create new, more complex
-          ones. With each new combination, you unlock fascinating facts and
-          insights about the elements you create.
-        </li>
-        <br />
-        <li>
-          <span class="highlight">
-            <center>Level Up</center>
-          </span><br />
-          Progress through 13 challenging levels, each with the goal of
-          discovering 100 new elements. As you advance, the combinations become
-          more intricate, pushing your problem-solving skills to the limit.
-        </li>
-        <br />
-        <li>
-          <span class="highlight">
-            <center>Interactive Learning</center>
-          </span><br />
-          Every new element you discover comes with a detailed pop-up box that
-          reveals interesting facts, making learning a seamless part of the
-          gaming experience.
-        </li>
-      </ul>
-      <br /><br /><br />
       <h3>
-        <div class="bounce">How to Play?</div>
+        <div class="typewriter">
+          Welcome to&nbsp;<span class="highlight">Physi-c-Tech</span>: The
+          Ultimate Elemental Adventure!
+        </div>
       </h3>
 
-      <ul>
-        <div class="step1">
-          <img src="1.png" alt="Start Your Adventure" />
-          <div>
-            <span class="highlight">Start Your Adventure:</span> Begin by
-            selecting "Play or Continue" to start or resume your game. If you're
-            new, choose "New Game" to begin your journey from scratch.
+      <div class="content">
+        <p>
+          Dive into a thrilling journey where physics meets technology in the
+          most interactive and educational game ever created!
+          <span class="highlight">Physi-c-Tech</span> is designed to ignite your
+          curiosity, challenge your intellect, and broaden your understanding of
+          the world around you through the exciting process of element discovery
+          and combination.
+        </p>
+        <br /><br /><br />
+
+        <h3>Explore and Discover</h3>
+        <ul class="explore">
+          <li>
+            <span class="highlight">
+              <center>Dynamic Combinations</center> </span
+            ><br />
+            Start with basic elements and combine them to create new, more
+            complex ones. With each new combination, you unlock fascinating
+            facts and insights about the elements you create.
+          </li>
+          <br />
+          <li>
+            <span class="highlight">
+              <center>Level Up</center> </span
+            ><br />
+            Progress through 13 challenging levels, each with the goal of
+            discovering 100 new elements. As you advance, the combinations
+            become more intricate, pushing your problem-solving skills to the
+            limit.
+          </li>
+          <br />
+          <li>
+            <span class="highlight">
+              <center>Interactive Learning</center> </span
+            ><br />
+            Every new element you discover comes with a detailed pop-up box that
+            reveals interesting facts, making learning a seamless part of the
+            gaming experience.
+          </li>
+        </ul>
+        <br /><br /><br />
+        <h3>
+          <div class="bounce">How to Play?</div>
+        </h3>
+
+        <ul>
+          <div class="step1">
+            <img src="./images/1.png" alt="Start Your Adventure" />
+            <div>
+              <span class="highlight">Start Your Adventure:</span> Begin by
+              selecting "Play or Continue" to start or resume your game. If
+              you're new, choose "New Game" to begin your journey from scratch.
+            </div>
           </div>
-        </div>
-        <br />
-        <div class="step">
-          <img src="2.png" alt="Combine Elements" />
-          <div>
-            <span class="highlight">Combine Elements:</span> You will start with
-            a set of basic elements. Drag and drop one element onto another to
-            attempt a combination. If a valid combination is made, a new element
-            is created.
+          <br />
+          <div class="step">
+            <img src="./images/2.png" alt="Combine Elements" />
+            <div>
+              <span class="highlight">Combine Elements:</span> You will start
+              with a set of basic elements. Drag and drop one element onto
+              another to attempt a combination. If a valid combination is made,
+              a new element is created.
+            </div>
           </div>
-        </div>
-        <br />
-        <div class="step">
-          <img src="4.png" alt="Track Your Progress" />
-          <div>
-            <span class="highlight">Track Your Progress:</span> Your element box
-            keeps track of all discovered elements. Review your collection and
-            read up on the facts about each element you've created.
+          <br />
+          <div class="step">
+            <img src="./images/3.png" alt="Track Your Progress" />
+            <div>
+              <span class="highlight">Track Your Progress:</span> Your element
+              box keeps track of all discovered elements. Review your collection
+              and read up on the facts about each element you've created.
+            </div>
           </div>
-        </div>
-        <br />
-        <div class="step">
-          <img src="3.png" alt="Discover and Learn" />
-          <div>
-            <span class="highlight">Discover and Learn:</span> When you create a
-            new element, a pop-up box will appear with details and interesting
-            facts about it. The new element is added to your element box,
-            expanding your collection.
+          <br />
+          <div class="step">
+            <img src="./images/4.png" alt="Discover and Learn" />
+            <div>
+              <span class="highlight">Discover and Learn:</span> When you create
+              a new element, a pop-up box will appear with details and
+              interesting facts about it. The new element is added to your
+              element box, expanding your collection.
+            </div>
           </div>
-        </div>
-        <br />
-        <div class="step">
-          <img src="5.png" alt="Advance Through Levels" />
-          <div>
-            <span class="highlight">Advance Through Levels:</span> Each level
-            challenges you to discover 100 new elements. As you progress,
-            combinations become more complex, requiring creative thinking and
-            experimentation.
+          <br />
+          <div class="step">
+            <img src="./images/5.png" alt="Advance Through Levels" />
+            <div>
+              <span class="highlight">Advance Through Levels:</span> Each level
+              challenges you to discover 100 new elements. As you progress,
+              combinations become more complex, requiring creative thinking and
+              experimentation.
+            </div>
           </div>
-        </div>
-        <br />
+          <br />
 
-        <li>
-          <span class="highlight">Stay Engaged:</span> Use the "Sound On/Off"
-          button to enhance your gaming experience with immersive sound effects.
-          Visit the "About" section for more information on game mechanics and
-          tips.
-        </li>
-      </ul>
-      <br /><br /><br />
+          <li>
+            <span class="highlight">Stay Engaged:</span> Use the "Sound On/Off"
+            button to enhance your gaming experience with immersive sound
+            effects. Visit the "About" section for more information on game
+            mechanics and tips.
+          </li>
+        </ul>
+        <br /><br /><br />
 
-      <h3>Features</h3>
+        <h3>Features</h3>
 
-      <ul class="features">
-        <li>
-          <span class="highlight">Engaging Gameplay:</span> Drag, drop, and
-          combine elements in a user-friendly interface designed to make
-          learning fun and intuitive.
-        </li>
-        <li>
-          <span class="highlight">Educational Value:</span> Gain knowledge about
-          physics and technology with each new discovery. Our game is crafted to
-          enhance your understanding of scientific principles and technological
-          innovations.
-        </li>
-        <li>
-          <span class="highlight">Progress Tracking:</span> Easily track your
-          discoveries and progress through each level. Your element box updates
-          in real-time, showcasing all the elements you've created.
-        </li>
-        <li>
-          <span class="highlight">Stunning Visuals and Sound:</span> Immerse
-          yourself in a visually appealing environment with captivating sound
-          effects that enhance your gaming experience.
-        </li>
-      </ul>
-      <br /><br /><br />
+        <ul class="features">
+          <li>
+            <span class="highlight">Engaging Gameplay:</span> Drag, drop, and
+            combine elements in a user-friendly interface designed to make
+            learning fun and intuitive.
+          </li>
+          <li>
+            <span class="highlight">Educational Value:</span> Gain knowledge
+            about physics and technology with each new discovery. Our game is
+            crafted to enhance your understanding of scientific principles and
+            technological innovations.
+          </li>
+          <li>
+            <span class="highlight">Progress Tracking:</span> Easily track your
+            discoveries and progress through each level. Your element box
+            updates in real-time, showcasing all the elements you've created.
+          </li>
+          <li>
+            <span class="highlight">Stunning Visuals and Sound:</span> Immerse
+            yourself in a visually appealing environment with captivating sound
+            effects that enhance your gaming experience.
+          </li>
+        </ul>
+        <br /><br /><br />
 
-      <h3>Why Physi-c-Tech?</h3>
-      <ul class="why">
-        <li>
-          <span class="highlight">Innovative Learning Tool:</span> Physi-c-Tech
-          bridges the gap between education and entertainment, making it an
-          ideal tool for students, teachers, and anyone with a passion for
-          science.
-        </li>
-        <li>
-          <span class="highlight">Endless Possibilities:</span> With hundreds of
-          elements to discover and countless combinations to explore, the game
-          offers endless hours of engaging and educational gameplay.
-        </li>
-        <li>
-          <span class="highlight">Community and Competition:</span> Join a
-          community of fellow explorers, share your discoveries, and compete to
-          see who can uncover the most elements!
-        </li>
-      </ul>
-      <br /><br /><br />
+        <h3>Why Physi-c-Tech?</h3>
+        <ul class="why">
+          <li>
+            <span class="highlight">Innovative Learning Tool:</span>
+            Physi-c-Tech bridges the gap between education and entertainment,
+            making it an ideal tool for students, teachers, and anyone with a
+            passion for science.
+          </li>
+          <li>
+            <span class="highlight">Endless Possibilities:</span> With hundreds
+            of elements to discover and countless combinations to explore, the
+            game offers endless hours of engaging and educational gameplay.
+          </li>
+          <li>
+            <span class="highlight">Community and Competition:</span> Join a
+            community of fellow explorers, share your discoveries, and compete
+            to see who can uncover the most elements!
+          </li>
+        </ul>
+        <br /><br /><br />
 
-      <p>
-        Prepare yourself for an adventure where your creativity and intellect
-        are your greatest tools. Whether you're a student eager to learn, a
-        teacher looking for a fun educational tool, or simply someone who loves
-        science and technology,
-        <span class="highlight">Physi-c-Tech</span> promises an unforgettable
-        experience.
-      </p>
+        <p>
+          Prepare yourself for an adventure where your creativity and intellect
+          are your greatest tools. Whether you're a student eager to learn, a
+          teacher looking for a fun educational tool, or simply someone who
+          loves science and technology,
+          <span class="highlight">Physi-c-Tech</span> promises an unforgettable
+          experience.
+        </p>
 
-      <p>
-        <span class="highlight">Start your journey now and see how many elements you can
-          discover!</span>
-      </p>
+        <p>
+          <span class="highlight"
+            >Start your journey now and see how many elements you can
+            discover!</span
+          >
+        </p>
+      </div>
     </div>
-  </div>
-  <footer style="text-align: center;">
-    &copy; 2024 Physi-c-Tech. All rights reserved.
-  </footer>
+
+    <footer style="text-align: center">
+      &copy; 2024 Physi-c-Tech. All rights reserved.
+    </footer>
   <a class="gotopbtn" id="myBtn"  href=""><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
   <script>
     // Get the button:
@@ -622,6 +840,5 @@ function scrollFunction() {
   }
 }
   </script>
-</body>
-
+  </body>
 </html>
