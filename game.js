@@ -214,11 +214,20 @@ openm=m=>{
 	document.getElementById(m).style.display="block";
 };
 play=()=>{
+    const newtons_loader = document.querySelector(".backdrop");
+	newtons_loader.style.display = "block";
+	setTimeout(() => {
+		newtons_loader.style.display="0";
+		setTimeout(() => {
+			newtons_loader.remove();
+		}, 500);
+	}, 2000);
+		
 	setTimeout(()=>{
 		document.querySelector(".pop-up").style.display="block";
 		document.querySelector(".outer").style.filter="blur(3px)";
 
-	},500);
+	},3500);
 	hintInterval = setInterval(enableHint, hintTime);
 	finalize();
 	score();
