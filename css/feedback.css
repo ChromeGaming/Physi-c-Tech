@@ -1,6 +1,7 @@
-*{
-  cursor: url('/images/CURSOR1.png'),auto;
+* {
+  cursor: url('/images/CURSOR1.png'), auto;
 }
+
 body {
   font-family: "Arial", sans-serif;
   background-image: url("https://i.pinimg.com/originals/e6/c9/e3/e6c9e3d891aa56637847ba09c28fa00c.jpg");
@@ -16,47 +17,54 @@ body {
 
 .feedback-container {
   background: rgba(0, 0, 0, 0.8);
-  padding: 30px;
+  padding: 20px;
   border-radius: 10px;
-  width: 80%;
-  max-width: 600px;
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+  width: 90%;
+  max-width: 400px;
+  max-height: 500px; /* Reduce the height */
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
   animation: fadeIn 2s ease-in-out;
 }
 
 .feedback-container h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: #ff5c5c;
+  font-size: 1.5rem;
+  animation: floatingText 2s infinite;
 }
 
 .feedback-container label {
   display: block;
-  margin: 10px 0 5px;
+  margin: 8px 0 4px;
+  font-size: 0.9rem;
+  animation: floatingText 2s infinite;
 }
 
 .feedback-container input,
 .feedback-container textarea,
 .feedback-container select {
-  width: 98%;
-  padding: 10px;
+  width: 96%;
+  padding: 8px;
   border-radius: 5px;
   border: none;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   background: rgba(255, 255, 255, 0.2);
   color: white;
+  font-size: 0.9rem;
+  animation: floatingText 2s infinite;
 }
 
 .feedback-container textarea {
   resize: none;
-  height: 100px;
+  height: 80px;
 }
 
 .star-rating {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
-  gap: 5px;
+  gap: 4px;
 }
 
 .star-rating input[type="radio"] {
@@ -64,7 +72,7 @@ body {
 }
 
 .star-rating label {
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   transition: color 0.2s;
 }
@@ -80,12 +88,12 @@ body {
 
 .feedback-container button {
   width: 100%;
-  padding: 15px;
+  padding: 12px;
   border: none;
   border-radius: 5px;
   background-color: #ff5c5c;
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -106,14 +114,25 @@ body {
   }
 }
 
+@keyframes floatingText {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
 .feedback-container .back-button {
-  margin-top: 15px;
+  margin-top: 10px;
   text-align: center;
 }
 
 .feedback-container .back-button a {
   color: #ff5c5c;
   text-decoration: none;
+  font-size: 0.9rem;
+  animation: floatingText 2s infinite;
 }
 
 .feedback-container .back-button a:hover {
@@ -133,20 +152,20 @@ option {
 }
 
 .swal-title {
-  font-size: 2em;
+  font-size: 1.5rem;
   color: #ff5c5c;
 }
 
 .swal-content {
-  font-size: 1.2em;
+  font-size: 1rem;
 }
 
 .swal-confirm-button {
   background-color: #ff5c5c;
   color: white;
   border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 1em;
+  padding: 8px 16px;
+  font-size: 0.9rem;
   border: none;
   cursor: pointer;
 }
