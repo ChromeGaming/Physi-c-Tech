@@ -1,6 +1,7 @@
-*{
-  cursor: url('/images/CURSOR1.png'),auto;
+* {
+  cursor: url('/images/CURSOR1.png'), auto;
 }
+
 body {
   font-family: "Arial", sans-serif;
   background-image: url("https://i.pinimg.com/originals/e6/c9/e3/e6c9e3d891aa56637847ba09c28fa00c.jpg");
@@ -69,12 +70,12 @@ body {
   transition: color 0.2s;
 }
 
-.star-rating input[type="radio"]:checked ~ label {
+.star-rating input[type="radio"]:checked~label {
   color: #ff5c5c;
 }
 
 .star-rating label:hover,
-.star-rating label:hover ~ label {
+.star-rating label:hover~label {
   color: #ff5c5c;
 }
 
@@ -118,6 +119,7 @@ body {
 
 .feedback-container .back-button a:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 option {
