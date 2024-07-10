@@ -5,6 +5,10 @@ var lastrand=-1;
 var sound=true;
 var moves=localStorage.getItem('sfa_moves') ? localStorage.getItem('sfa_moves') : 0;
 var D={};
+
+let lastClickTime = 0;
+let doubleClickThreshold = 300;
+
 findResult=(id1,id2)=>{
 	for (var i=0; i<recipes.length; i++){
 		if ((recipes[i].i[0] == id1) && (recipes[i].i[1] == id2)) return [recipes[i].r,recipes[i].m];
@@ -234,6 +238,10 @@ play=()=>{
 				bugfix();
 			}
 			pointerdown = e => {
+				let currentTime = new Date().getTime();
+				let timeDiff = currentTime - lastClickTime;
+				lastClickTime = currentTime;
+				let doubleClicked = timeDiff < doubleClickThreshold;
 				if (touchinprogress) return;
 				touchinprogress = true;
 				e.preventDefault();
@@ -291,7 +299,7 @@ play=()=>{
 					D.n = document.body.appendChild(D.g.cloneNode(true));
 					D.n.className = D.n.className.replace(/pantryIngredient/, 'ingredient');
 					D.n.id = 'i' + ingredients.length++;
-					if (D.g.parentNode.classList.contains("move")) {
+					if (D.g.parentNode.classList.contains("move") && !doubleClicked) {
 						D.g.style.visibility = "hidden";
 						D.g.m = D.g;
 					}
