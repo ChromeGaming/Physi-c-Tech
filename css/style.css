@@ -55,6 +55,12 @@ button {
   align-items: center;
   cursor: pointer;
 }
+#google_translate_element {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
 
 .cross {
   display: flex;
