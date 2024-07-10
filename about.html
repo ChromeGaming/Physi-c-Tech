@@ -464,6 +464,42 @@
           font-size: 20px;
         }
       }
+       footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  margin-top: 15px;
+  box-shadow: 0 0 10px red;
+  border-radius: 10px;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out, glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px red;
+  }
+  to {
+    box-shadow: 0 0 20px darkred, 0 0 30px red;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
     </style>
   </head>
 
@@ -693,7 +729,7 @@
       </div>
     </div>
     <footer style="text-align: center; margin-top: 15px">
-      &copy; 2024 Physi-c-Tech. All rights reserved.
+      <strong>Physi-c-Tech ❤️|   © 2024: All rights reserved</strong>
     </footer>
   </body>
 </html>
