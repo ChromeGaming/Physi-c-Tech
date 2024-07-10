@@ -31,6 +31,260 @@
         width: 10px;
       }
 
+
+    body {
+      background-color: #121212;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #f0f3ff;
+      margin: 0;
+      padding: 50px;
+      text-align: justify;
+      text-justify: inter-word;
+      background-image: url('https://i.pinimg.com/originals/e6/c9/e3/e6c9e3d891aa56637847ba09c28fa00c.jpg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-attachment: fixed;
+      
+    }
+    /* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px;
+ 
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d61c1c;
+  border: 1px solid black;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    outline: none;
+    border-color: red;
+    border-radius: 10px;
+    box-shadow: 0 0 10px darkred;
+}
+
+
+    #homecontent {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+
+
+      color: #fff;
+      width: 90%;
+      height: 100%;
+      text-align: left;
+      font-size: 2.5em;
+    }
+
+    #homecontent h1 {
+      margin-left: 26%;
+      color: #ff5c5c;
+    }
+
+    #homecontent span,
+    #homecontent div {
+      font-style: normal;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: center;
+    }
+
+    .buttons .btn {
+      position: relative;
+      width: 140px;
+      height: 20px;
+      cursor: pointer;
+      padding: 17px;
+      padding-left: 26px;
+      padding-right: 26spx;
+      align-items: center;
+      background: none;
+      border: none;
+      color: #fff;
+      font-weight: 500;
+      font-size: 18px;
+      margin-bottom: 10px;
+      z-index: 1;
+    }
+
+    .buttons a {
+      text-decoration: none;
+    }
+
+    .buttons .btn::before,
+    .buttons .btn::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(15px);
+      background: rgba(253, 251, 251, 0.049);
+      border-radius: 10px;
+      box-shadow: 20px 20px 50px rgba(74, 65, 57, 0.5);
+      z-index: -2;
+    }
+
+    .buttons .btn::after {
+      width: 99%;
+      height: 75%;
+      top: 25%;
+      left: 0.5%;
+      z-index: -3;
+      transform: scaleX(0.5);
+      transition: all 0.3s;
+      background: linear-gradient(135deg, #f47f0a, #ff045c);
+    }
+
+    .buttons .btn:hover:after {
+      transform: scaleX(1.01) translateY(-15px);
+    }
+
+    h1,
+    h3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    h1 {
+      font-size: 50px;
+      color: #ff6347;
+    }
+
+    h3 {
+      font-size: 30px;
+      color: gold;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+      margin: 20px auto;
+    }
+
+    ul {
+      list-style-type: none;
+
+      padding: 20px;
+      margin: 20px auto;
+    }
+
+    ul.explore,
+    ul.features,
+    ul.why {
+      list-style-type: none;
+      padding: 20px;
+      border: 1px solid #f0f3ff;
+      border-radius: 25px;
+      margin: 20px auto;
+      background-color: #151515;
+    }
+
+    li {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+
+    .explore li,
+    .features li,
+    .why li {
+      padding-bottom: 10px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .highlight {
+      color: #f43636;
+      font-weight: 900;
+      text-decoration: underline;
+    }
+
+    .welcome {
+      line-height: 45px;
+    }
+
+    .welcome .highlight {
+      display: contents;
+    }
+
+    .popup {
+      background-color: #282828;
+      border: 2px solid #f43636;
+      padding: 10px;
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+      font-size: 20px;
+      flex-direction: column-reverse;
+      flex-wrap: nowrap;
+    }
+
+    .step img {
+      width: 50%;
+      margin-right: 50px;
+      margin-top: 30px;
+      border-radius: 10px;
+    }
+
+    .step1 {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+      font-size: 20px;
+      flex-direction: column-reverse;
+      flex-wrap: nowrap;
+    }
+
+    .step1 img {
+      max-width: 250px;
+      margin-top: 30px;
+      margin-right: 50px;
+      border-radius: 10px;
+    }
+
+    .typewriter {
+      overflow: hidden;
+      border-right: 0.15em solid #f0f3ff;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: 0.15em;
+      animation: typing 3.5s steps(30, end),
+        blink-caret 0.5s step-end infinite;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
       ::-webkit-scrollbar-track {
         background: #000;
       }
@@ -692,8 +946,25 @@
         </div>
       </div>
     </div>
+
     <footer style="text-align: center; margin-top: 15px">
       &copy; 2024 Physi-c-Tech. All rights reserved.
     </footer>
+  <a class="gotopbtn" id="myBtn"  href=""><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+  <script>
+    // Get the button:
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+  </script>
   </body>
 </html>
