@@ -8,12 +8,28 @@ body {
   color: white;
   margin: 0;
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   height: 100vh;
   overflow: hidden;
 }
-
+.HomeBtn{
+  color:white;
+  position:absolute;
+  top:0;
+  left:0;
+  margin:2rem;
+  font-size:2rem;
+}
+.HomeBtn i{
+  text-decoration:none;
+  color:white;
+}
+.HomeBtn i:hover{
+  color:red;
+  cursor:pointer;
+}
 .feedback-container {
   background: rgba(0, 0, 0, 0.8);
   padding: 30px;
