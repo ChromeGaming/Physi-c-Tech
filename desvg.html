@@ -3,6 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Convert SVG to Condensed String</title>
+	<div id="google_element"></div>
+	<!-- Load Google Translate script over HTTPS and handle errors -->
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate" onerror="handleError(this)"></script>
+  
+	<script type="text/javascript">
+	  function loadGoogleTranslate(){
+		new google.translate.TranslateElement({
+		  pageLanguage: 'en',
+		  includedLanguages: 'en,hi,pa,sa,mr,ur,bn,es,fr,de,it',
+		  layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+		}, 'google_element');
+	  }
+  
+	  function handleError(error) {
+		console.error('Error loading Google Translate script:', error);
+	  }
+	</script>
 	<script>
 		function parseElement(el) {
 			var elString = '';
@@ -141,6 +158,7 @@
 	</script>
 </head>
 <body>
+	
 This takes an SVG with very specific formatting and returns a condensed string. The SVG data should have tabs and newlines removed first.<br><br>
 Coordinates should all be two digits long - meaning your SVG can only be up to 99 pixels wide and 99 pixels tall.<br><br>
 Colors should be web-safe, three-digit colors (#FF2211 should be #F21. #6AB794 should first be converted to something web-safe, like #7B9. Not an exact match by any means.)<br>
