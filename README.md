@@ -32,35 +32,40 @@ We’re excited to have you contribute to our project! Here’s how you can get 
     git clone https://github.com/<your-github-username>/Physi-c-Tech
     ```
     Replace `<your-github-username>` with your GitHub username.
+   
+4. **Go to Physi-c-Tech Folder**
+     ```
+    cd Physi-c-Tech
+     ```
 
-3. **Add a remote upstream to the original repository**: This ensures you can pull in changes from the main project.
+5. **Add a remote upstream to the original repository**: This ensures you can pull in changes from the main project.
     ```bash
     git remote add upstream https://github.com/GameSphere-MultiPlayer/Physi-c-Tech/
     ```
 
-4. **Create a new branch**: It's good practice to create a new branch for each feature or fix you work on.
+6. **Create a new branch**: It's good practice to create a new branch for each feature or fix you work on.
     ```bash
     git checkout -b <your-branch-name>
     ```
 
-5. **Make changes to the source code**: Tweak, enhance, and improve!
+7. **Make changes to the source code**: Tweak, enhance, and improve!
 
-6. **Add your changes**: Stage the files you want to include in your commit.
+8. **Add your changes**: Stage the files you want to include in your commit.
     ```bash
     git add <file1> <file2> ...
     ```
 
-7. **Commit your changes**: Write a meaningful commit message.
+9. **Commit your changes**: Write a meaningful commit message.
     ```bash
     git commit -m "<your-commit-message>"
     ```
 
-8. **Push your changes**: Send your changes to GitHub.
+10. **Push your changes**: Send your changes to GitHub.
     ```bash
     git push origin <your-branch-name>
     ```
 
-9. **Create a pull request (PR)**: Go to your forked repository on GitHub and you’ll see a button to create a PR. Click it and submit your changes for review.
+11. **Create a pull request (PR)**: Go to your forked repository on GitHub and you’ll see a button to create a PR. Click it and submit your changes for review.
 
 ## Using GitHub Desktop
 
