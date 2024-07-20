@@ -182,6 +182,11 @@ align-items: center;
 color: #f43636;
 font-weight: 900;
 text-decoration: underline;
+cursor: pointer;
+}
+
+.highlight :hover{
+    color: #de1818;
 }
 
 .welcome {

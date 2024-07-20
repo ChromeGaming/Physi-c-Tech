@@ -2,6 +2,15 @@
   cursor: url('/images/CURSOR1.png'), auto;
 }
 
+#google_element{
+  margin: 1.25rem;
+  align-self: center;
+}
+
+#google_element :hover{
+  cursor: pointer;
+}
+
 body {
   font-family: "Arial", sans-serif;
   background-image: url("https://i.pinimg.com/originals/e6/c9/e3/e6c9e3d891aa56637847ba09c28fa00c.jpg");
@@ -14,6 +23,7 @@ body {
   align-items: center;
   height: 100vh;
   overflow: hidden;
+  flex-direction: column;
 }
 .HomeBtn{
   color:white;
@@ -153,6 +163,7 @@ body {
 
 .feedback-container .back-button a:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 option {
