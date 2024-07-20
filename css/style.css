@@ -313,11 +313,16 @@ button {
   width: 90%;
   height: 100%;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2.8em;
   font-style: italic;
   overflow-y: auto; /* Enable vertical scrolling */
   height: 100vh;
 }
+
+#homecontent .focusin{
+  text-shadow: 5px 5px #b63c0c;
+}
+
 /* Style the scrollbar - Chrome, Safari */
 #homecontent::-webkit-scrollbar {
   width: 10px; /* Width of the scrollbar */
