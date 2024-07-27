@@ -153,6 +153,7 @@ body {
 
 .feedback-container .back-button a:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 option {
