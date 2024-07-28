@@ -55,6 +55,11 @@ button {
   align-items: center;
   cursor: pointer;
 }
+
+.hover {
+  cursor: pointer;
+}
+
 #google_translate_element {
   position: absolute;
   top: 10px;
