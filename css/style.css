@@ -1,6 +1,5 @@
-
-*{
-  cursor: url('/images/CURSOR1.png'),auto;
+* {
+  cursor: url("/images/CURSOR1.png"), auto;
 }
 body {
   margin: 0;
@@ -12,6 +11,9 @@ body {
 button {
   background-color: #fff;
   border: none;
+}
+img:hover {
+  border: 5px solid black;
 }
 
 .pop-up-container {
@@ -101,7 +103,7 @@ button {
 }
 
 #forge {
-  border: 2px solid #000;
+  border: 5px solid black;
   width: 99%;
   height: 200px;
   min-height: 200px;
@@ -112,6 +114,7 @@ button {
   font-size: 50px;
   grid-row-start: 2;
   grid-row-end: 3;
+  margin: auto;
 }
 
 #pantry {
@@ -165,6 +168,7 @@ button {
 
 #upbutton,
 #downbutton {
+  margin-left: 10px;
   padding-top: 15px;
   min-width: 48px;
   min-height: 105px;
