@@ -50,11 +50,18 @@
           <span id="playbutton" class="btn" onclick="play()">PLAY</span><br />
           <span id="newgamebutton" class="btn" onclick="newgame()">NEW GAME</span><br />
           <span id="soundbutton" class="btn" onclick="toggleSound()">SOUND ON</span><br />
+          <a href="howtoplay.html" class="btn" style="text-decoration: none;">HOW TO PLAY</a><br />
           <span class="btn" onclick="window.location.href='about.html'">ABOUT</span><br />
         </div>
       </div>
+      <div class="snowflakes">
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❄</div>
+      </div>  
     </div>
-
+    
+    
     <button id="feedbackButton" class="feedback-btn" onclick="handleFeedback()">
       Facing an Issue? Help Us Improve!
     </button>
@@ -69,6 +76,8 @@
       <div id="collectioncontent" class="trophy"></div>
       <div id="finalcontent" class="trophy"></div>
     </div>
+
+
 
     <div id="modal" class="modal">
       <div id="modalcontent" class="modal">
@@ -130,7 +139,7 @@
       <div class="pop-up" style="display: none">
         <div class="upper-cross" style="padding: 4px">
           <button onclick="cross()">
-            <i class="fa-solid fa-xmark fa-beat" style="color: white"></i>
+            <i class="fa-solid fa-xmark fa-beat hover" style="color: white"></i>
           </button>
         </div>
         <div class="lower-content">
@@ -139,12 +148,37 @@
         </div>
         <div class="lower-button">
           <button onclick="nextSpeech()">
-            <i class="fa-solid fa-forward fa-bounce fa-lg"></i>
+            <i class="fa-solid fa-forward fa-bounce fa-lg hover"></i>
           </button>
         </div>
       </div>
     </div>
+
     
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    const snowflakesContainer = document.querySelector('.snowflakes');
+
+    function createSnowflake() {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        snowflake.textContent = ['❅', '❆', '❄'][Math.floor(Math.random() * 3)];
+        snowflake.style.left = Math.random() * 100 + 'vw';
+        snowflake.style.animationDuration = Math.random() * 3 + 2 + 's'; // between 2 and 5 seconds
+        snowflake.style.fontSize = Math.random() * 1 + 1 + 'em'; // between 1em and 2em
+        snowflake.style.opacity = Math.random();
+
+        snowflakesContainer.appendChild(snowflake);
+
+        setTimeout(() => {
+            snowflake.remove();
+        }, 5000); // remove snowflake after 5 seconds
+    }
+
+    setInterval(createSnowflake, 200);
+});
+
+    </script>
 
     <script src="./js/preloader.js"></script>
     <script src="./js/elements.js"></script>
@@ -153,5 +187,6 @@
     <script src="./js/svg.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/description.js"></script>
+    
   </body>
 </html>

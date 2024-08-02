@@ -8,6 +8,8 @@
 
 **ABOUT US**:
 
+
+# Physi-c-Tech 💻
 Welcome to the **Physi-c-Tech** project! We're building something amazing with love, brains, and responsibility. Our project aims to create a cutting-edge physics-based multiplayer game that combines fun and learning. Whether you're a seasoned developer or just starting, we would love for you to join us on this exciting journey.
 <hr>
 
@@ -52,6 +54,7 @@ Welcome to the **Physi-c-Tech** project! We're building something amazing with l
 <hr>
 
 # How to Contribute 🟢
+
 We’re excited to have you contribute to our project! Here’s how you can get started:
 
 ## Using the Command Line
@@ -59,70 +62,87 @@ We’re excited to have you contribute to our project! Here’s how you can get 
 1. **Fork the repository**: This creates a copy of the project in your GitHub account. Click the "Fork" button at the top right of this page.
 
 2. **Clone the repository to your local machine**:
-    ```bash
-    git clone https://github.com/<your-github-username>/Physi-c-Tech
-    ```
-    Replace `<your-github-username>` with your GitHub username.
-   
-4. **Go to Physi-c-Tech Folder**
-     ```
-    cd Physi-c-Tech
-     ```
+   ```bash
+   git clone https://github.com/<your-github-username>/Physi-c-Tech
+   ```
+   Replace `<your-github-username>` with your GitHub username.
+3. **Go to Physi-c-Tech Folder**
 
-5. **Add a remote upstream to the original repository**: This ensures you can pull in changes from the main project.
-    ```bash
-    git remote add upstream https://github.com/GameSphere-MultiPlayer/Physi-c-Tech/
-    ```
+   ```
+   cd Physi-c-Tech
+   ```
 
-6. **Create a new branch**: It's good practice to create a new branch for each feature or fix you work on.
-    ```bash
-    git checkout -b <your-branch-name>
-    ```
+4. **Add a remote upstream to the original repository**: This ensures you can pull in changes from the main project.
 
-7. **Make changes to the source code**: Tweak, enhance, and improve!
+   ```bash
+   git remote add upstream https://github.com/GameSphere-MultiPlayer/Physi-c-Tech/
+   ```
 
-8. **Add your changes**: Stage the files you want to include in your commit.
-    ```bash
-    git add <file1> <file2> ...
-    ```
+5. **Create a new branch**: It's good practice to create a new branch for each feature or fix you work on.
 
-9. **Commit your changes**: Write a meaningful commit message.
-    ```bash
-    git commit -m "<your-commit-message>"
-    ```
+   ```bash
+   git checkout -b <your-branch-name>
+   ```
 
-10. **Push your changes**: Send your changes to GitHub.
-    ```bash
-    git push origin <your-branch-name>
-    ```
+6. **Make changes to the source code**: Tweak, enhance, and improve!
 
-11. **Create a pull request (PR)**: Go to your forked repository on GitHub and you’ll see a button to create a PR. Click it and submit your changes for review.
+7. **Add your changes**: Stage the files you want to include in your commit.
+
+   ```bash
+   git add <file1> <file2> ...
+   ```
+
+8. **Commit your changes**: Write a meaningful commit message.
+
+   ```bash
+   git commit -m "<your-commit-message>"
+   ```
+
+9. **Push your changes**: Send your changes to GitHub.
+
+   ```bash
+   git push origin <your-branch-name>
+   ```
+
+10. **Create a pull request (PR)**: Go to your forked repository on GitHub and you’ll see a button to create a PR. Click it and submit your changes for review.
 
 ## Using GitHub Desktop
 
 1. **Open GitHub Desktop** and log in to your GitHub account.
 
 2. **Add your local repository**:
-    - Go to "File" > "Add Local Repository" and select your repository.
+
+   - Go to "File" > "Add Local Repository" and select your repository.
 
 3. **Ensure you are on the correct branch**:
-    - Use the "Branch" menu to switch if necessary.
+
+   - Use the "Branch" menu to switch if necessary.
 
 4. **Make and commit your changes**:
-    - Click the "+" button, make your changes, and enter a commit message.
+
+   - Click the "+" button, make your changes, and enter a commit message.
 
 5. **Push your changes**:
-    - Click the "Push origin" button.
+
+   - Click the "Push origin" button.
 
 6. **Create a pull request** on GitHub:
-    - Navigate to your fork of the repository and click "Compare & pull request".
+
+   - Navigate to your fork of the repository and click "Compare & pull request".
 
 7. **Review and submit your pull request**:
-    - Add a title and description, then click "Create pull request".
+   - Add a title and description, then click "Create pull request".
 
 **Note:** In order to create a pull request, you must have a fork of the original repository in your GitHub account and have made changes in that forked repository.
 
+# Project Contributors🫂
+
+<a href="https://github.com/ChromeGaming/Physi-c-Tech/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ChromeGaming/Physi-c-Tech" />
+</a>
+
 # Need Help?
+
 If you encounter any issues or have questions, feel free to open an issue in the repository or contact us directly. We’re here to help you get started and make meaningful contributions.
 
 
