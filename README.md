@@ -1,8 +1,39 @@
-![Community](https://github.com/GameSphere-MultiPlayer/Physi-c-Tech/assets/98798977/e79af9da-814e-487e-8a9a-85947384d3b2)
+<a id="top"></a>
+<h1 align="center"> Physi-c-Tech 💻</h1>
+<hr>
+
+![image](https://github.com/user-attachments/assets/62869608-b2a8-42b7-9fd9-6a3f0d4981ab)
+
+<hr>
+
+**ABOUT US**:
+
 
 # Physi-c-Tech 💻
-
 Welcome to the **Physi-c-Tech** project! We're building something amazing with love, brains, and responsibility. Our project aims to create a cutting-edge physics-based multiplayer game that combines fun and learning. Whether you're a seasoned developer or just starting, we would love for you to join us on this exciting journey.
+<hr>
+
+
+## :zap: Featured In:
+
+
+ <div>
+    <h2><img src="https://github.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/blob/master/Emojis/Hand%20gestures/Flexed%20Biceps.png?raw=true" width="35" height="35" > Open Source Programs</h2>
+  </div>
+<table>
+   <tr>
+      <th>Event Logo</th>
+      <th>Event Name</th>
+      <th>Event Description</th>
+   </tr>
+   <tr>
+      <td><img src="https://user-images.githubusercontent.com/63473496/153487849-4f094c16-d21c-463e-9971-98a8af7ba372.png" width="200" height="auto" loading="lazy" alt="GSSoC 24"/></td>
+      <td>GirlScript Summer of Code 2024</td>
+      <td>GirlScript Summer of Code is a three-month-long Open Source Program conducted every summer by GirlScript Foundation. It is an initiative to bring more beginners to Open-Source Software Development.</td>
+   </tr>
+</table>
+
+<hr>
 
 <div align="center">
 <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
@@ -20,6 +51,7 @@ Welcome to the **Physi-c-Tech** project! We're building something amazing with l
 <img src="https://img.shields.io/github/contributors/GameSphere-MultiPlayer/Physi-c-Tech?style=for-the-badge" />
 <img src="https://img.shields.io/github/last-commit/GameSphere-MultiPlayer/Physi-c-Tech?style=for-the-badge" />
 </div>
+<hr>
 
 # How to Contribute 🟢
 
@@ -113,4 +145,62 @@ We’re excited to have you contribute to our project! Here’s how you can get 
 
 If you encounter any issues or have questions, feel free to open an issue in the repository or contact us directly. We’re here to help you get started and make meaningful contributions.
 
-Thank you for your interest in contributing to **Physi-c-Tech**! Together, we can build something incredible. 🚀
+
+<!---------------------------------------------------------------CONTRIBUTION GUIDELINES--------------------------------------------------------------------------->
+
+<details>
+ <summary><h2>:sparkles:Contribution Guidelines:</h2></summary>
+ 
+ 
+ * **Checkout and make your changes for the develop branch only:** When working on your contributions, switch to the **develop** branch in your local repository. This ensures that you are working on the latest version of the codebase.
+
+* **Create pull requests only for the develop branch:** When you are ready to submit your changes, create a pull request (PR) targeting the **develop** branch. This allows the maintainers to review and merge your code into the main development branch.
+
+* **Maintain contribution guidelines:** Each project may have its specific contribution guidelines. It's important to familiarize yourself with these guidelines before submitting your contributions. Adhering to these guidelines ensures consistency and helps maintain the quality of the codebase.
+
+* **Format your commit message with the issue number:** When making commits related to an issue, follow the format **Fixes: #32 in your commit message. Replace 32 with the issue number you are addressing.** This helps track and manage issues more efficiently.
+
+* **Attach a Postman response screenshot for backend tasks:** For tasks related to the backend, it is recommended to include a screenshot of the Postman response along with your pull request. This provides additional context and helps reviewers understand the changes made and their impact on the backend functionality.
+
+* **Make your pull request descriptive and include examples:** When creating a pull request, provide a clear and descriptive explanation of the changes you made. This helps reviewers understand the purpose and significance of your contribution. Additionally, including at least one example that demonstrates the intended usage or effect of your changes can be beneficial.
+
+* **Rebase your commits and optimize file changes:** When submitting your pull request, consider rebasing your commits into one commit and optimizing your file changes. This helps keep the commit history clean and makes it easier for reviewers to understand your changes.
+
+Remember, following these guidelines will help ensure a smooth and efficient contribution process. Happy coding!
+
+</details>
+
+<hr>
+
+<!-- Code of conduct -->
+<div>
+<h2><img src = "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" width="35" height="35"> Code of Conduct:</h2>
+</div>
+
+Please note that this project is released with a [Contributor Code of Conduct](./CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+<hr>
+
+
+<h2 align = "center">Our Contributors ❤️</h2>
+<div align = "center">
+ <h3>Thank you for contributing to our repository</h3>
+ <h1> Together, we can build something incredible. 🚀</h1>
+  <a href="https://github.com/ChromeGaming/Physi-c-Tech/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ChromeGaming/Physi-c-Tech" />
+</a>
+</div>
+
+
+<hr>
+
+<div>
+  <h2><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f64f_1f3fb/512.webp" width="35" height="35"> Support </h2>
+</div>
+
+<div>
+  Don't forget to leave a star<img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f31f/512.webp" width="35" height="30"> for this project!
+</div> <br>
+
+<a href="#top" style="position: fixed; bottom: 20px; right: 20px; background-color: black ; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; border-radius: 5px; font-family: Arial; font-size: 16px;">Go to Top</a>
+
+
