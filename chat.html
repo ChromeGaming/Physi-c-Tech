@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physi-c Tech</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <!-- Existing content of the website -->
+    
+    <!-- Chatbot logo -->
+    <div id="chatbot-logo" onclick="toggleChatbot()">💬</div>
+
+    <!-- Chatbot interface -->
+    <div id="chatbot-container">
+        <div id="chatbot">
+            <div id="chatbot-header">
+                Chatbot
+                <button id="chatbot-close" onclick="toggleChatbot()">&times;</button>
+            </div>
+            <div id="chatbot-messages"></div>
+            <input type="text" id="chatbot-input" placeholder="Ask me something...">
+            <button id="chatbot-send">Send</button>
+        </div>
+    </div>
+
+    <script src="chat.js"></script>
+</body>
+</html>
